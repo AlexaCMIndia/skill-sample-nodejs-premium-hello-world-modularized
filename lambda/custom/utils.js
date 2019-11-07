@@ -25,9 +25,6 @@ function getSpecialGoodbye(handlerInput) {
       language: handlerInput.t('GERMAN_LANG'), greeting: 'auf wiedersehen', locale: 'de-DE', voice: ['Hans', 'Marlene', 'Vicki']
     },
     /*{
-      language: handlerInput.t('PORTUGUESE_LANG'), greeting: 'tchau', locale: 'pt-BR', voice: ['Camila', 'Ricardo']
-    },*/
-    /*{
       language: handlerInput.t('SPANISH_LANG'), greeting: 'hasta luego', locale: 'es-ES', voice: ['Conchita', 'Enrique']
     },*/
     {
@@ -51,9 +48,6 @@ function getSpecialHello(handlerInput) {
     {
       language: handlerInput.t('GERMAN_LANG'), greeting: 'Hallo', locale: 'de-DE', voice: ['Hans', 'Marlene', 'Vicki']
     },
-    /*{
-      language: handlerInput.t('PORTUGUESE_LANG'), greeting: 'Olá', locale: 'pt-BR', voice: ['Camila', 'Ricardo']
-    },*/
     /*{
       language: handlerInput.t('SPANISH_LANG'), greeting: 'Hola', locale: 'es-ES', voice: ['Conchita', 'Enrique']
     }*/
