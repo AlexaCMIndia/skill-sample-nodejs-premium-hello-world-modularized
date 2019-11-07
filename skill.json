@@ -10,6 +10,14 @@
           "name": "Premium Hello World",
           "description": "Premium Hello World greets you in a variety of languages"
         },
+        "en-GB": {
+          "summary": "Premium Hello World greets you in a variety of languages",
+          "examplePhrases": [
+            "Alexa open Premium Hello World"
+          ],
+          "name": "Premium Hello World",
+          "description": "Premium Hello World greets you in a variety of languages"
+        },
         "es-ES": {
           "summary": "Hola Mundo Premium te saluda en distintos idiomas.",
           "examplePhrases": [

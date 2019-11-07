@@ -37,17 +37,20 @@ module.exports = {
             SPECIAL_GREETING_MSG: 'Here\'s your special greeting. ',
             SPECIAL_GREETING_LANG_MSG: 'That\'s hello in {{lang}}.',
             UPSELL_MSG: 'By the way, you can now get greetings in more languages.',
-            ENTITLEMENT_INFO_MSG: 'Con {{productName}}, ahora puedo decir hello en distintos idiomas.',
-            SUBSCRIPTION_INFO_MSG: 'Con {{productName}}, ahora puedo decir hello en distintos idiomas, con distintos acentos usando Amazon Polly.',
-            CONSUMABLE_INFO_MSG: 'Con {{productName}}, ahora puedo decir goodbye en distintos idiomas, con distintos acentos usando Amazon Polly.',
+            ENTITLEMENT_INFO_MSG: 'With {{productName}}, I can now say hello in different languages.',
+            SUBSCRIPTION_INFO_MSG: 'With {{productName}}, I can now say hello in different languages and accents thanks to Amazon Polly.',
+            CONSUMABLE_INFO_MSG: 'With {{productName}}, I can now say goodbye in different languages and accents thanks to Amazon Polly.',
             CANCEL_PRODUCT_ERROR_MSG: 'There was an error handling your product cancellation request. Please try again or contact us for help.',
-            HINDI_LANG: 'Hindi',
-            GERMAN_LANG: 'German',
-            PORTUGUESE_LANG: 'Portuguese',
-            SPANISH_LANG: 'Spanish',
-            FRENCH_LANG: 'French',
-            JAPANESE_LANG: 'Japanese',
-            ITALIAN_LANG: 'Italian'
+            'en-US': 'American English',
+            'en-AU': 'Australian English',
+            'en-GB': 'British English',
+            'en-IN': 'Indian English',
+            'hi-IN': 'Hindi',
+            'de-DE': 'German',
+            'es-ES': 'Castilian Spanish',
+            'fr-FR': 'French',
+            'ja-JP': 'Japanese',
+            'it-IT': 'Italian'
         }
     },
     es: {
@@ -91,18 +94,16 @@ module.exports = {
             SUBSCRIPTION_INFO_MSG: 'Con {{productName}}, ahora puedo decir hola en varios idiomas, con distintos acentos usando Amazon Polly.',
             CONSUMABLE_INFO_MSG: 'Con {{productName}}, ahora puedo decir adiós en varios idiomas, con distintos acentos usando Amazon Polly.',
             CANCEL_PRODUCT_ERROR_MSG: 'Hubo un error procesando la cancelación del producto. Por favor inténtalo otra vez o contáctanos para obtener ayuda.',
-            HINDI_LANG: 'Hindi',
-            GERMAN_LANG: 'Alemán',
-            PORTUGUESE_LANG: 'Portugués',
-            SPANISH_LANG: 'Español',
-            FRENCH_LANG: 'Francés',
-            JAPANESE_LANG: 'Japonés',
-            ITALIAN_LANG: 'Italiano'
-        }
-    },
-    'es-MX': {
-        translation: {
-            SURE_MSG: 'Sale.'
+            'en-US': 'Inglés Americano',
+            'en-AU': 'Inglés Australiano',
+            'en-GB': 'Inglés Británico',
+            'en-IN': 'Inglés de la India',
+            'hi-IN': 'Hindi',
+            'de-DE': 'Alemán',
+            'es-ES': 'Castellano',
+            'fr-FR': 'Francés',
+            'ja-JP': 'Japonés',
+            'it-IT': 'Italiano'
         }
     },
     'es-US': {

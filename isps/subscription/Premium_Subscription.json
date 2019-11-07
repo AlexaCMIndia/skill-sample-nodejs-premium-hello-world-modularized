@@ -25,6 +25,23 @@
           "boughtCardDescription": "You now have the Premium Subscription, which will greet you in multiple languages in a variety of voices using Amazon Polly."
         }
       },
+      "en-GB": {
+        "name": "Premium Subscription",
+        "summary": "The Premium Subscription greets the user in a variety of voices.",
+        "description": "The Premium Subscription Pack unlocks the magic of Polly Voice, and greets you in a variety of languages, like hindi, spanish, italian, and more.",
+        "smallIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_108.png",
+        "largeIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_512.png",
+        "examplePhrases": [
+          "Alexa, buy the premium subscription"
+        ],
+        "keywords": [
+          "subscriptions"
+        ],
+        "customProductPrompts": {
+          "purchasePromptDescription": "The Premium Subscription Pack unlocks the magic of Polly Voice, and greets you in a variety of languages using Amazon Polly.",
+          "boughtCardDescription": "You now have the Premium Subscription, which will greet you in multiple languages in a variety of voices using Amazon Polly."
+        }
+      },
       "es-ES": {
         "name": "Suscripción Premium",
         "summary": "La Suscripción Premium te saluda utilizando distintas voces de Amazon Polly.",
@@ -139,6 +156,9 @@
   "privacyAndCompliance": {
     "locales": {
       "en-US": {
+        "privacyPolicyUrl": "https://www.amazon.com"
+      },
+      "en-GB": {
         "privacyPolicyUrl": "https://www.amazon.com"
       },
       "es-ES": {

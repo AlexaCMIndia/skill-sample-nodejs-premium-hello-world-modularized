@@ -21,6 +21,23 @@
           "boughtCardDescription": "You now have the Goodbyes Pack, which says goodbye a limited number of times in a variety of languages like French, Spanish, Hindi, and more."
         }
       },
+      "en-GB": {
+        "name": "Goodbyes Pack",
+        "summary": "The Goodbyes Pack says goodbye a limited number of times in a variety of languages.",
+        "description": "The Goodbyes Pack says goodbye a limited number of times in a variety of languages like French, Spanish, Hindi, and more.",
+        "smallIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_108.png",
+        "largeIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_512.png",
+        "examplePhrases": [
+          "Alexa, buy the goodbyes pack"
+        ],
+        "keywords": [
+          "goodbyes"
+        ],
+        "customProductPrompts": {
+          "purchasePromptDescription": "The Goodbyes Pack says goodbye a limited number of times in a variety of languages like French, Spanish, Hindi, and more.",
+          "boughtCardDescription": "You now have the Goodbyes Pack, which says goodbye a limited number of times in a variety of languages like French, Spanish, Hindi, and more."
+        }
+      },
       "es-ES": {
         "name": "Paquete de Despedidas",
         "summary": "El Paquete de Despedidas te dice adiós, un número limitado de veces, en otros idiomas como Hindi, Francés, Español y más.",
@@ -135,6 +152,9 @@
   "privacyAndCompliance": {
     "locales": {
       "en-US": {
+        "privacyPolicyUrl": "http://www.amazon.com/privacy"
+      },
+      "en-GB": {
         "privacyPolicyUrl": "http://www.amazon.com/privacy"
       },
       "es-ES": {

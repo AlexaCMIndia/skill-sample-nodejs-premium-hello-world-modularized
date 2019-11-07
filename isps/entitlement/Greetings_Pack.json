@@ -21,6 +21,23 @@
           "boughtCardDescription": "You now have the Greetings Pack, which says hello in a variety of languages like French, Spanish, Hindi, and more."
         }
       },
+      "en-GB": {
+        "name": "Greetings Pack",
+        "summary": "The Greetings Pack says hello in a variety of languages.",
+        "description": "The Greetings Pack says hello in a variety of languages like French, Spanish, Hindi, and more.",
+        "smallIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_108.png",
+        "largeIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_512.png",
+        "examplePhrases": [
+          "Alexa, buy the greetings pack"
+        ],
+        "keywords": [
+          "greetings"
+        ],
+        "customProductPrompts": {
+          "purchasePromptDescription": "The Greetings Pack says hello in a variety of languages like French, Spanish, Hindi, and more.",
+          "boughtCardDescription": "You now have the Greetings Pack, which says hello in a variety of languages like French, Spanish, Hindi, and more."
+        }
+      },
       "es-ES": {
         "name": "Paquete de Bienvenidas",
         "summary": "El Paquete de Bienvenidas te saluda en otros idiomas como Hindi, Francés, Español y más.",
@@ -135,6 +152,9 @@
   "privacyAndCompliance": {
     "locales": {
       "en-US": {
+        "privacyPolicyUrl": "https://www.amazon.com"
+      },
+      "en-GB": {
         "privacyPolicyUrl": "https://www.amazon.com"
       },
       "es-ES": {

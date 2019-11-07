@@ -19,49 +19,83 @@ function getSimpleHello(handlerInput) {
 function getSpecialGoodbye(handlerInput) {
   const specialGoodbyes = [
     {
-      language: handlerInput.t('HINDI_LANG'), greeting: 'alavida', locale: 'en-IN', voice: ['Aditi', 'Raveena']
+      language: handlerInput.t('en-US'), greeting: 'see you later', locale: 'en-US', voice: ['Ivy', 'Joanna', 'Joey', 'Justin', 'Kendra', 'Kimberly', 'Matthew', 'Salli']
     },
     {
-      language: handlerInput.t('GERMAN_LANG'), greeting: 'auf wiedersehen', locale: 'de-DE', voice: ['Hans', 'Marlene', 'Vicki']
+      language: handlerInput.t('en-AU'), greeting: 'catch you later', locale: 'en-AU', voice: ['Nicole', 'Russell']
     },
     {
-      language: handlerInput.t('SPANISH_LANG'), greeting: 'hasta luego', locale: 'es-ES', voice: ['Conchita', 'Enrique']
+      language: handlerInput.t('en-GB'), greeting: 'farewell', locale: 'en-GB', voice: ['Amy', 'Brian', 'Emma']
     },
     {
-      language: handlerInput.t('FRENCH_LANG'), greeting: 'au revoir', locale: 'fr-FR', voice: ['Celine', 'Lea', 'Mathieu']
+      language: handlerInput.t('en-IN'), greeting: 'goodbye', locale: 'en-IN', voice: ['Aditi', 'Raveena']
+    },
+    /*{
+      language: handlerInput.t('hi-IN'), greeting: 'अलविदा', locale: 'hi-IN', voice: ['Aditi'] // hi-IN lang tag is broken
+    },*/
+    {
+      language: handlerInput.t('de-DE'), greeting: 'auf wiedersehen', locale: 'de-DE', voice: ['Hans', 'Marlene', 'Vicki']
     },
     {
-      language: handlerInput.t('JAPANESE_LANG'), greeting: 'sayonara', locale: 'ja-JP', voice: ['Mizuki', 'Takumi']
+      language: handlerInput.t('es-ES'), greeting: 'hasta luego', locale: 'es-ES', voice: ['Conchita', 'Enrique']
     },
     {
-      language: handlerInput.t('ITALIAN_LANG'), greeting: 'arrivederci', locale: 'it-IT', voice: ['Carla', 'Giorgio']
+      language: handlerInput.t('fr-FR'), greeting: 'au revoir', locale: 'fr-FR', voice: ['Celine', 'Lea', 'Mathieu']
+    },
+    {
+      language: handlerInput.t('ja-JP'), greeting: 'さよなら', locale: 'ja-JP', voice: ['Mizuki', 'Takumi']
+    },
+    {
+      language: handlerInput.t('it-IT'), greeting: 'arrivederci', locale: 'it-IT', voice: ['Carla', 'Giorgio']
     }
   ];
-  return randomize(specialGoodbyes);
+
+  return randomize(
+    specialGoodbyes.filter(function (item) {
+      return item.locale !== Alexa.getLocale(handlerInput.requestEnvelope);
+    })  
+  );
 }
 
 function getSpecialHello(handlerInput) {
   const specialGreetings = [
     {
-      language: handlerInput.t('HINDI_LANG'), greeting: 'Namaste', locale: 'en-IN', voice: ['Aditi', 'Raveena']
+      language: handlerInput.t('en-US'), greeting: 'how\'s it going?', locale: 'en-US', voice: ['Ivy', 'Joanna', 'Joey', 'Justin', 'Kendra', 'Kimberly', 'Matthew', 'Salli']
     },
     {
-      language: handlerInput.t('GERMAN_LANG'), greeting: 'Hallo', locale: 'de-DE', voice: ['Hans', 'Marlene', 'Vicki']
+      language: handlerInput.t('en-AU'), greeting: 'how you going?', locale: 'en-AU', voice: ['Nicole', 'Russell']
     },
     {
-      language: handlerInput.t('SPANISH_LANG'), greeting: 'Hola', locale: 'es-ES', voice: ['Conchita', 'Enrique']
+      language: handlerInput.t('en-GB'), greeting: 'how do you do?', locale: 'en-GB', voice: ['Amy', 'Brian', 'Emma']
     },
     {
-      language: handlerInput.t('FRENCH_LANG'), greeting: 'Bonjour', locale: 'fr-FR', voice: ['Celine', 'Lea', 'Mathieu']
+      language: handlerInput.t('en-IN'), greeting: 'Hello', locale: 'en-IN', voice: ['Aditi', 'Raveena']
+    },
+    /*{
+      language: handlerInput.t('hi-IN'), greeting: 'नमस्ते', locale: 'hi-IN', voice: ['Aditi'] // hi-IN lang tag is broken
+    },*/
+    {
+      language: handlerInput.t('de-DE'), greeting: 'Hallo', locale: 'de-DE', voice: ['Hans', 'Marlene', 'Vicki']
     },
     {
-      language: handlerInput.t('JAPANESE_LANG'), greeting: 'Konichiwa', locale: 'ja-JP', voice: ['Mizuki', 'Takumi']
+      language: handlerInput.t('es-ES'), greeting: 'Hola', locale: 'es-ES', voice: ['Conchita', 'Enrique']
     },
     {
-      language: handlerInput.t('ITALIAN_LANG'), greeting: 'Ciao', locale: 'it-IT', voice: ['Carla', 'Giorgio']
+      language: handlerInput.t('fr-FR'), greeting: 'Bonjour', locale: 'fr-FR', voice: ['Celine', 'Lea', 'Mathieu']
+    },
+    {
+      language: handlerInput.t('ja-JP'), greeting: 'こんにちは', locale: 'ja-JP', voice: ['Mizuki', 'Takumi']
+    },
+    {
+      language: handlerInput.t('it-IT'), greeting: 'Ciao', locale: 'it-IT', voice: ['Carla', 'Giorgio']
     }
   ];
-  return randomize(specialGreetings);
+  
+  return randomize(
+    specialGreetings.filter(function (item) {
+      return item.locale !== Alexa.getLocale(handlerInput.requestEnvelope);
+    })  
+  );
 }
 
 function getRemainingCredits(handlerInput, consumable, usedSessionAttributeName, creditsPerEntitlement){
@@ -110,7 +144,7 @@ function getPremiumOrRandomGoodbye(handlerInput, inSkillProducts) {
     const specialGoodbye = getSpecialGoodbye(handlerInput);
     const preGoodbyeSpeechText = handlerInput.t('SPECIAL_GOODBYE_MSG');
     const postGoodbyeSpeechText = handlerInput.t('SPECIAL_GOODBYE_LANG_MSG', {lang: specialGoodbye.language});
-    const langSpecialGoodbye = switchLanguage(`${specialGoodbye.greeting}!`, specialGoodbye.locale);
+    const langSpecialGoodbye = switchLanguage(`${specialGoodbye.greeting}.`, specialGoodbye.locale);
     cardText = `${preGoodbyeSpeechText} ${specialGoodbye.greeting} ${postGoodbyeSpeechText}`;
     const randomVoice = randomize(specialGoodbye.voice);
     speechOutput = `${preGoodbyeSpeechText} ${switchVoice(langSpecialGoodbye, randomVoice)} ${postGoodbyeSpeechText}.`;
@@ -162,7 +196,7 @@ function getResponseBasedOnAccessType(handlerInput, productList, preSpeechText) 
   const specialGreeting = getSpecialHello(handlerInput);
   const preGreetingSpeechText = `${preSpeechText} ${handlerInput.t('SPECIAL_GREETING_MSG')}`;
   const postGreetingSpeechText = handlerInput.t('SPECIAL_GREETING_LANG_MSG', {lang: specialGreeting.language});
-  const langSpecialGreeting = switchLanguage(`${specialGreeting.greeting}!`, specialGreeting.locale);
+  const langSpecialGreeting = switchLanguage(`${specialGreeting.greeting}.`, specialGreeting.locale);
 
   if (isEntitled(premiumSubscriptionProduct)) {
     // Customer has bought the Premium Subscription. Switch to Polly Voice, and return special hello
