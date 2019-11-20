@@ -106,6 +106,59 @@ module.exports = {
             'it-IT': 'Italiano'
         }
     },
+    it: {
+        translation: {
+            SKILL_NAME: 'Ciao Mondo Premium',
+            WELCOME_MSG: 'Benvenuti a Ciao Mondo Premium! Puoi dirmi Ciao oppure chiedermi cosa puoi comprare! Cosa vuoi fare?',
+            REPROMPT_MSG: 'Non ho capito. Come posso aiutarti?',
+            PRODUCT_OWNED_MSG: 'Ottima notizia! Possiedi già {{productName}}',
+            YES_NO_QUESTION: [
+                'Vuoi un altro saluto?',
+                'Posso offrirti un altro saluto?',
+                'Vuoi sentire un altro saluto?'
+            ],
+            PRODUCT_LIST_MSG: 'I prodotti che puoi ascquistare sono {{products}}. Per sapere di più di un prodotto, chiedimi: dammi più informazioni riguardo a, seguito dal nome del prodotto. Se desideri acquistarlo, basta dire, compra, e il nome del prodotto. Come posso aiutarti?',
+            NO_PURCHASEABLE_PRODUCTS_MSG: 'Non hai prodotti da poter acquistare.',
+            LEARN_MORE_PROMPT: [
+                'Vuoi sapere di più?',
+                'Vuoi altre informazioni?',
+                'Ti interessa sapere di più?'
+            ],
+            SIMPLE_GREETINGS: ['Come va?', 'Come stai?', 'Ciao!', 'Tutto bene?'],
+            SIMPLE_GREETING: 'Ecco il tuo saluto semplice: {{greeting}}.',
+            SIMPLE_GOODBYES: ['Arrivederci!', 'Buona giornata!', 'A presto!'],
+            SURE_MSG: 'Va bene.',
+            BUY_UNKNOWN_RESULT_MSG: 'È successo qualcosa di inaspettato, ma grazie per esserti interessato di {{productName}}.',
+            BUY_ERROR_MSG: 'Scusami, ma è successo un error con l\'acquisto. Assicurati di avere i permessi necessari per gli acquisti vocali. Queste impostazioni si trovano nella tua app Alexa.',
+            BOUGHT_SOMETHING_MSG: 'Hai comprato i seguenti prodotti:',
+            BOUGHT_NOTHING_MSG: 'Non hai ancora comprato nulla. Se vuoi sapere cosa puoi comprare prova a chiedere "cosa posso comprare?". Oppure dì di sì per un altro saluto.',
+            AVAILABLE_CREDITS_MSG: 'Hai ancora {{count}} addio premium rimasto. ',
+            AVAILABLE_CREDITS_MSG_plural: 'Hai ancora {{count}} addii premium rimasti. ',
+            CREDITS_FOLLOWUP_STOCK: 'Dì stop, e ne userai uno!',
+            CREDITS_FOLLOWUP_NO_STOCK: 'Puoi comprarne altri dicendo. compra pacchetto di addii.',
+            HELP_MSG: 'Puoi dirmi Ciao oppure chiedermi cosa puoi comprare! Cosa vuoi fare?',
+            ERROR_MSG: 'Si è verificato un errore. Per favore riprova!',
+            SPECIAL_GOODBYE_MSG: 'Ecco il tuo addio speciale. ',
+            SPECIAL_GOODBYE_LANG_MSG: 'Vuol dire addio in {{lang}}',
+            SPECIAL_GREETING_MSG: 'Ecco il tuo saluto speciale. ',
+            SPECIAL_GREETING_LANG_MSG: 'Significa ciao in {{lang}}.',
+            UPSELL_MSG: 'Tra l\'altro, puoi avere saluti in altre lingue!',
+            ENTITLEMENT_INFO_MSG: 'Con {{productName}}, posso salutarti in altre lingue.',
+            SUBSCRIPTION_INFO_MSG: 'Con {{productName}}, posso salutarti in altre lingue ed accenti usando Amazon Polly',
+            CONSUMABLE_INFO_MSG: 'Con {{productName}}, posso salutarti in altre lingue ed accenti usando Amazon Polly.',
+            CANCEL_PRODUCT_ERROR_MSG: 'Si è verificato un errore. Por favore riprova di nuovo o contatta il servizio clienti per ricevere aiuto.',
+            'en-US': 'Inglese Americano',
+            'en-AU': 'Inglese Australiano',
+            'en-GB': 'Inglese Britannico',
+            'en-IN': 'Inglese Indiano',
+            'hi-IN': 'Hindi',
+            'de-DE': 'Tedesco',
+            'es-ES': 'Spagnolo',
+            'fr-FR': 'Francese',
+            'ja-JP': 'Giappone',
+            'it-IT': 'Italiano'
+        }
+    },
     'es-US': {
         translation: {
             SURE_MSG: 'Okey.'

@@ -202,7 +202,7 @@ const UpsellBuyResponseHandler = {
     // Request Status Error. Something has failed with the connection.
     console.log('Connections.Response indicated failure. error: ' + request.payload.message);
     return handlerInput.responseBuilder
-      .speak(handlerInput.t('BUY_ERROR_MESSAGE'))
+      .speak(handlerInput.t('BUY_ERROR_MSG'))
       .getResponse();
   }
 };

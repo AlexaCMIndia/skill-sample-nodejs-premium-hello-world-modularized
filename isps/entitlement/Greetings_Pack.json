@@ -4,24 +4,24 @@
   "referenceName": "Greetings_Pack",
   "publishingInformation": {
     "locales": {
-      "en-US": {
-        "name": "Greetings Pack",
-        "summary": "The Greetings Pack says hello in a variety of languages.",
-        "description": "The Greetings Pack says hello in a variety of languages like French, Spanish, Hindi, and more.",
+      "it-IT": {
+        "name": "Pacchetto di saluti",
+        "summary": "Il pacchetto di saluti ti dice ciao in diverse lingue.",
+        "description": "Il pacchetto di saluti ti dice ciao in diverse lingue.",
         "smallIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_108.png",
         "largeIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_512.png",
         "examplePhrases": [
-          "Alexa, buy the greetings pack"
+          "Alexa, compra il pacchetto di saluti"
         ],
         "keywords": [
-          "greetings"
+          "ciao"
         ],
         "customProductPrompts": {
-          "purchasePromptDescription": "The Greetings Pack says hello in a variety of languages like French, Spanish, Hindi, and more.",
-          "boughtCardDescription": "You now have the Greetings Pack, which says hello in a variety of languages like French, Spanish, Hindi, and more."
+          "purchasePromptDescription": "Il pacchetto di saluti ti dice ciao in diverse lingue come l'inglese, lo spagnolo e il francese.",
+          "boughtCardDescription": "Fantastico! Ora hai a disposizione il pacchetto di saluti."
         }
       },
-      "en-GB": {
+      "en-US": {
         "name": "Greetings Pack",
         "summary": "The Greetings Pack says hello in a variety of languages.",
         "description": "The Greetings Pack says hello in a variety of languages like French, Spanish, Hindi, and more.",
@@ -70,6 +70,23 @@
         "customProductPrompts": {
           "purchasePromptDescription": "El Paquete de Bienvenidas te saluda en otros idiomas como Hindi, Francés, Español y más.",
           "boughtCardDescription": "Ahora tienes el Paquete de Bienvenidas, que te saluda çç"
+        }
+      },
+      "en-GB": {
+        "name": "Greetings Pack",
+        "summary": "The Greetings Pack says hello in a variety of languages.",
+        "description": "The Greetings Pack says hello in a variety of languages like French, Spanish, Hindi, and more.",
+        "smallIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_108.png",
+        "largeIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_512.png",
+        "examplePhrases": [
+          "Alexa, buy the greetings pack"
+        ],
+        "keywords": [
+          "greetings"
+        ],
+        "customProductPrompts": {
+          "purchasePromptDescription": "The Greetings Pack says hello in a variety of languages like French, Spanish, Hindi, and more.",
+          "boughtCardDescription": "You now have the Greetings Pack, which says hello in a variety of languages like French, Spanish, Hindi, and more."
         }
       }
     },
@@ -143,6 +160,13 @@
           "price": 99,
           "currency": "JPY"
         }
+      },
+      "amazon.it": {
+        "releaseDate": "2019-06-26T00:00Z",
+        "defaultPriceListing": {
+          "price": 0.99,
+          "currency": "EUR"
+        }
       }
     },
     "taxInformation": {
@@ -151,16 +175,19 @@
   },
   "privacyAndCompliance": {
     "locales": {
-      "en-US": {
-        "privacyPolicyUrl": "https://www.amazon.com"
+      "it-IT": {
+        "privacyPolicyUrl": "https://www.amazon.it/privacy"
       },
-      "en-GB": {
+      "en-US": {
         "privacyPolicyUrl": "https://www.amazon.com"
       },
       "es-ES": {
         "privacyPolicyUrl": "https://www.amazon.com"
       },
       "es-US": {
+        "privacyPolicyUrl": "https://www.amazon.com"
+      },
+      "en-GB": {
         "privacyPolicyUrl": "https://www.amazon.com"
       }
     }

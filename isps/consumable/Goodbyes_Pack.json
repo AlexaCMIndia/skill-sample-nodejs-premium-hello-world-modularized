@@ -4,24 +4,26 @@
   "referenceName": "Goodbyes_Pack",
   "publishingInformation": {
     "locales": {
-      "en-US": {
-        "name": "Goodbyes Pack",
-        "summary": "The Goodbyes Pack says goodbye a limited number of times in a variety of languages.",
-        "description": "The Goodbyes Pack says goodbye a limited number of times in a variety of languages like French, Spanish, Hindi, and more.",
+      "it-IT": {
+        "name": "Pacchetto di addii",
+        "summary": "Il pacchetto di addii di saluta in varie lingue.",
+        "description": "Il pacchetto di addii di saluta in varie lingue.",
         "smallIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_108.png",
         "largeIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_512.png",
         "examplePhrases": [
-          "Alexa, buy the goodbyes pack"
+          "Alexa, compra il pacchetto di addii"
         ],
         "keywords": [
-          "goodbyes"
+          "addii",
+          "arrivederci",
+          "a presto"
         ],
         "customProductPrompts": {
-          "purchasePromptDescription": "The Goodbyes Pack says goodbye a limited number of times in a variety of languages like French, Spanish, Hindi, and more.",
-          "boughtCardDescription": "You now have the Goodbyes Pack, which says goodbye a limited number of times in a variety of languages like French, Spanish, Hindi, and more."
+          "purchasePromptDescription": "Il pacchetto di addii ti dice addio in diverse lingue come l'Hindi, il francese, lo spagnolo e tante altre.",
+          "boughtCardDescription": "Ottimo! Ora hai a disposizione il pacchetto di addii in diverse lingue!"
         }
       },
-      "en-GB": {
+      "en-US": {
         "name": "Goodbyes Pack",
         "summary": "The Goodbyes Pack says goodbye a limited number of times in a variety of languages.",
         "description": "The Goodbyes Pack says goodbye a limited number of times in a variety of languages like French, Spanish, Hindi, and more.",
@@ -70,6 +72,23 @@
         "customProductPrompts": {
           "purchasePromptDescription": "El Paquete de Despedidas te dice adiós un número limitado de veces en otros idiomas como Hindi, Francés, Español y más.",
           "boughtCardDescription": "Ahora tienes el Paquete de Despedidas, que te dice adiós, un número limitado de veces, en otros idiomas como Hindi, Francés, Español y más."
+        }
+      },
+      "en-GB": {
+        "name": "Goodbyes Pack",
+        "summary": "The Goodbyes Pack says goodbye a limited number of times in a variety of languages.",
+        "description": "The Goodbyes Pack says goodbye a limited number of times in a variety of languages like French, Spanish, Hindi, and more.",
+        "smallIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_108.png",
+        "largeIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_512.png",
+        "examplePhrases": [
+          "Alexa, buy the goodbyes pack"
+        ],
+        "keywords": [
+          "goodbyes"
+        ],
+        "customProductPrompts": {
+          "purchasePromptDescription": "The Goodbyes Pack says goodbye a limited number of times in a variety of languages like French, Spanish, Hindi, and more.",
+          "boughtCardDescription": "You now have the Goodbyes Pack, which says goodbye a limited number of times in a variety of languages like French, Spanish, Hindi, and more."
         }
       }
     },
@@ -143,6 +162,13 @@
           "price": 99,
           "currency": "JPY"
         }
+      },
+      "amazon.it": {
+        "releaseDate": "2019-06-26T00:00Z",
+        "defaultPriceListing": {
+          "price": 0.99,
+          "currency": "EUR"
+        }
       }
     },
     "taxInformation": {
@@ -151,10 +177,10 @@
   },
   "privacyAndCompliance": {
     "locales": {
-      "en-US": {
-        "privacyPolicyUrl": "http://www.amazon.com/privacy"
+      "it-IT": {
+        "privacyPolicyUrl": "https://www.amazon.it/privacy"
       },
-      "en-GB": {
+      "en-US": {
         "privacyPolicyUrl": "http://www.amazon.com/privacy"
       },
       "es-ES": {
@@ -162,6 +188,9 @@
       },
       "es-US": {
         "privacyPolicyUrl": "https://www.amazon.com"
+      },
+      "en-GB": {
+        "privacyPolicyUrl": "http://www.amazon.com/privacy"
       }
     }
   },

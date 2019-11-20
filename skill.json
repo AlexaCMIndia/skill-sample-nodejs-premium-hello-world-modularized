@@ -33,6 +33,14 @@
           ],
           "name": "Hola Mundo Premium",
           "description": "Hola Mundo Premium te saluda en distintos idiomas."
+        },
+        "it-IT": {
+          "summary": "Ciao Mondo Premium ti saluta in diverse lingue.",
+          "examplePhrases": [
+            "Alexa apri ciao mondo premium"
+          ],
+          "name": "Ciao Mondo Premium",
+          "description": "Ciao Mondo Premium ti saluta in diverse lingue."
         }
       },
       "isAvailableWorldwide": true,
