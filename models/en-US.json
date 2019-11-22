@@ -134,6 +134,7 @@
                         "return product",
                         "I want a refund",
                         "I want a refund of {product}",
+                        "I want a refund of the {product}",
                         "refund"
                     ]
                 }
