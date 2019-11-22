@@ -123,11 +123,12 @@
       "SK",
       "UA",
       "US",
-      "ES"
+      "ES",
+      "IT"
     ],
     "pricing": {
       "amazon.es": {
-        "releaseDate": "2019-06-26T00:00Z",
+        "releaseDate": "2019-11-20T00:00Z",
         "defaultPriceListing": {
           "price": 0.99,
           "currency": "EUR"
@@ -162,7 +163,7 @@
         }
       },
       "amazon.it": {
-        "releaseDate": "2019-06-26T00:00Z",
+        "releaseDate": "2019-11-20T00:00Z",
         "defaultPriceListing": {
           "price": 0.99,
           "currency": "EUR"
@@ -179,16 +180,16 @@
         "privacyPolicyUrl": "https://www.amazon.it/privacy"
       },
       "en-US": {
-        "privacyPolicyUrl": "https://www.amazon.com"
+        "privacyPolicyUrl": "http://www.amazon.com/privacy"
       },
       "es-ES": {
-        "privacyPolicyUrl": "https://www.amazon.com"
+        "privacyPolicyUrl": "http://www.amazon.es/privacy"
       },
       "es-US": {
-        "privacyPolicyUrl": "https://www.amazon.com"
+        "privacyPolicyUrl": "http://www.amazon.com/privacy?language=es_US"
       },
       "en-GB": {
-        "privacyPolicyUrl": "https://www.amazon.com"
+        "privacyPolicyUrl": "http://www.amazon.co.uk/privacy"
       }
     }
   },
