@@ -163,5 +163,56 @@ module.exports = {
         translation: {
             SURE_MSG: 'Okey.'
         }
+    },
+    fr: {
+        translation: {
+            SKILL_NAME: `Genie des Salutations Premium`,
+            WELCOME_MSG: `Bienvenue chez le Génie des Salutations version Premium! Je peux vous dire bonjour ou bien vous proposez les produits disponibles à l'achat. Quel est votre choix?`,
+            REPROMPT_MSG: `Désolé, je n'ai pas bien compris. Souhaitez-vous entendre une autre salutation?`,
+            PRODUCT_OWNED_MSG: `Bonne nouvelle! Vous avez déjà acheté {{productName}}`,
+            YES_NO_QUESTION: [
+                `Voulez-vous entendre une autre salutation?`,
+                `Souhaitez-vous écouter un autre message d'accueil?`
+            ],
+            PRODUCT_LIST_MSG: `Les produits actuellement disponibles à l'achat sont {{products}}. Pour en savoir plus sur un produit, dites-moi par exemple 'donne-moi plus d'informations sur l'abonnement premium'. Pour acheter un produit, dites-moi par exemple 'achètes l'abonnement premium'. Souhaitez-vous entendre une autre salutation?`,
+            NO_PURCHASEABLE_PRODUCTS_MSG: `Il n'y a plus de produits disponibles à l'achat.`,
+            LEARN_MORE_PROMPT: [
+                `Voulez-vous en savoir davantage?`,
+                `Intéressé par plus d'informations?`,
+                `Souhaitez-vous avoir plus d'informations?`
+            ],
+            SIMPLE_GREETINGS: ['Bonjour!', 'Enchantée!', 'Comment allez-vous', 'Waza!'],
+            SIMPLE_GREETING: `Voici votre message d'accueil: {{greeting}}.`,
+            SIMPLE_GOODBYES: ['Au revoir!', 'A bientôt!', 'A très vite!'],
+            SURE_MSG: `Bien sûr.`,
+            BUY_UNKNOWN_RESULT_MSG: `Désolé, un problème inattendu est survenu pendant votre achat. Merci de votre intérêt pour le produit {{productName}}`,
+            BUY_ERROR_MSG: `Désolé, il y a un problème avec votre achat. Assurez-vous d'avoir activer les achats vocaux depuis l'application Alexa avant de réessayer.`,
+            BOUGHT_SOMETHING_MSG: `Vous avez acheté les produits suivants:`,
+            BOUGHT_NOTHING_MSG: `Vous n'avez pas encore acheté de produits. Pour connaitre les produits disponibles, il suffit de me dire 'que puis-je acheter'. Souhaitez-vous entendre une autre salutation?`,
+            AVAILABLE_CREDITS_MSG: `Il vous reste {{count}} adieu personnalisé.`,
+            CREDITS_FOLLOWUP_STOCK: `Dites simplement 'stop' and vous utiliserez un credit.`,
+            CREDITS_FOLLOWUP_NO_STOCK: `Pour acheter des credits supplémentaires, dites simplement 'achètes le pack d'aurevoir personnalisé'.`,
+            HELP_MSG: `Je peux vous dire bonjour ou bien vous proposez les produits disponibles à l'achat. Quel est votre choix?`,
+            ERROR_MSG: `Désolé, je n'ai pas compris. Pouvez-vous reformuler?`,
+            SPECIAL_GOODBYE_MSG: `Voici votre adieux personalisé: `,
+            SPECIAL_GOODBYE_LANG_MSG: `Cela veut dire 'au revoir' en {{lang}}.`,
+            SPECIAL_GREETING_MSG: `Voici votre message d'accueil personnalisé: `,
+            SPECIAL_GREETING_LANG_MSG: `Cela veut dire 'bonjour' en {{lang}}.`,
+            UPSELL_MSG: `Vous pouvez maintenant obtenir des messages d'accueil dans plusieurs langues.`,
+            ENTITLEMENT_INFO_MSG: `Avec le produit {{productName}}, je peux vous dire 'Bonjour' dans plusieurs langues.`,
+            SUBSCRIPTION_INFO_MSG: `Avec le produit {{productName}}, je peux vous dire 'Bonjour' dans plusieurs langues et avec des voix différentes grace à Amazon Polly.`,
+            CONSUMABLE_INFO_MSG: `Avec le produit {{productName}}, je peux vous dire 'Au Revoir' dans plusieurs langues et avec des voix différentes grace à Amazon Polly.`,
+            CANCEL_PRODUCT_ERROR_MSG: `Il y a eu un problème pendant l'annulation de votre achat. Veuillez ressayer ou bien contacter notre équipe support pour obtenir plus d'aide.`,
+            'en-US': 'Anglais Américain',
+            'en-AU': 'Anglais Australian',
+            'en-GB': 'Anglais Britannique',
+            'en-IN': 'Anglais Indien',
+            'hi-IN': 'Hindi',
+            'de-DE': 'Allemand',
+            'es-ES': 'Castillan',
+            'fr-FR': 'Français',
+            'ja-JP': 'Japonais',
+            'it-IT': 'Italien'
+        }
     }
 }

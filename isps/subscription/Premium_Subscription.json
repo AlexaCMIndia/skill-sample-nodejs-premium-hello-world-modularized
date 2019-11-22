@@ -92,6 +92,24 @@
           "purchasePromptDescription": "The Premium Subscription Pack unlocks the magic of Polly Voice, and greets you in a variety of languages using Amazon Polly.",
           "boughtCardDescription": "You now have the Premium Subscription, which will greet you in multiple languages in a variety of voices using Amazon Polly."
         }
+      },
+      "fr-FR": {
+        "name": "Abonnement Premium",
+        "summary": "L'abonnement premium vous permet d'écouter des salutations dans différentes langues et avec différentes voix.",
+        "description": "L'abonnement premium vous débloque l'accès aux voix proposées par Amazon Polly dans différentes langues comme par exemple en Hindi, espagnol, italien et plus encore...",
+        "smallIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_108.png",
+        "largeIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_512.png",
+        "examplePhrases": [
+          "Alexa, achètes l'abonnement premium"
+        ],
+        "keywords": [
+          "subscriptions",
+          "abonnement"
+        ],
+        "customProductPrompts": {
+          "purchasePromptDescription": "L'abonnement premium vous débloque l'accès aux voix proposées par Amazon Polly dans différentes langues.",
+          "boughtCardDescription": "Vous venez de souscrire à l'abonnement premium qui vous permet d'accéder aux différentes voix proposées par Amazon Polly."
+        }
       }
     },
     "distributionCountries": [
@@ -128,7 +146,8 @@
       "UA",
       "US",
       "ES",
-      "IT"
+      "IT",
+      "FR"
     ],
     "pricing": {
       "amazon.es": {
@@ -172,6 +191,13 @@
           "price": 9.99,
           "currency": "EUR"
         }
+      },
+      "amazon.fr": {
+        "releaseDate": "2019-11-20T00:00Z",
+        "defaultPriceListing": {
+          "price": 9.99,
+          "currency": "EUR"
+        }
       }
     },
     "taxInformation": {
@@ -194,6 +220,9 @@
       },
       "en-GB": {
         "privacyPolicyUrl": "http://www.amazon.co.uk/privacy"
+      },
+      "fr-FR": {
+        "privacyPolicyUrl": "http://www.amazon.fr/privacy"
       }
     }
   },

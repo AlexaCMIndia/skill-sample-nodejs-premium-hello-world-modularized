@@ -41,6 +41,14 @@
           ],
           "name": "Ciao Mondo Premium",
           "description": "Ciao Mondo Premium ti saluta in diverse lingue."
+        },
+        "fr-FR": {
+          "summary": "Le Génie des Saluatations (version Premium) vous salue dans différentes langues.",
+          "examplePhrases": [
+            "Alexa ouvre le génie des salutations premium"
+          ],
+          "name": "Genie des Salutations version Premium",
+          "description": "Le Génie des Saluatations (version Premium) vous salue dans différentes langues."
         }
       },
       "isAvailableWorldwide": true,

@@ -88,6 +88,23 @@
           "purchasePromptDescription": "The Greetings Pack says hello in a variety of languages like French, Spanish, Hindi, and more.",
           "boughtCardDescription": "You now have the Greetings Pack, which says hello in a variety of languages like French, Spanish, Hindi, and more."
         }
+      },
+      "fr-FR": {
+        "name": "Pack des Salutations Personnalisées",
+        "summary": "Le pack des Salutations vous permet de dire 'Bonjour' dans différentes langues.",
+        "description": "Le pack des Salutations vous permet de dire 'Bonjour' dans différentes langues comme par exemple en Hindi, Espagnol, Italien.",
+        "smallIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_108.png",
+        "largeIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_512.png",
+        "examplePhrases": [
+          "Alexa, achètes le pack des salutations personnalisées"
+        ],
+        "keywords": [
+          "salutations"
+        ],
+        "customProductPrompts": {
+          "purchasePromptDescription": "Le pack des Salutations vous permet de dire 'Bonjour' dans différentes langues comme par exemple en Japonais, Allemand et Italien.",
+          "boughtCardDescription": "Vous venez d'acheter le pack des Salutations qui permet de dire 'Bonjour' dans différentes langues comme par exemple en Hindi, Allemand, Japonais."
+        }
       }
     },
     "distributionCountries": [
@@ -124,7 +141,8 @@
       "UA",
       "US",
       "ES",
-      "IT"
+      "IT",
+      "FR"
     ],
     "pricing": {
       "amazon.es": {
@@ -168,6 +186,13 @@
           "price": 0.99,
           "currency": "EUR"
         }
+      },
+      "amazon.fr": {
+        "releaseDate": "2019-11-20T00:00Z",
+        "defaultPriceListing": {
+          "price": 0.99,
+          "currency": "EUR"
+        }
       }
     },
     "taxInformation": {
@@ -190,6 +215,9 @@
       },
       "en-GB": {
         "privacyPolicyUrl": "http://www.amazon.co.uk/privacy"
+      },
+      "fr-FR": {
+        "privacyPolicyUrl": "http://www.amazon.fr/privacy"
       }
     }
   },

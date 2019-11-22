@@ -90,6 +90,24 @@
           "purchasePromptDescription": "The Goodbyes Pack says goodbye a limited number of times in a variety of languages like French, Spanish, Hindi, and more.",
           "boughtCardDescription": "You now have the Goodbyes Pack, which says goodbye a limited number of times in a variety of languages like French, Spanish, Hindi, and more."
         }
+      },
+      "fr-FR": {
+        "name": "Pack des Adieux Personnalisés",
+        "summary": "Le pack des adieux personnalisés vous mentionne 'Au Revoir' un nombre limité de fois dans différentes langues.",
+        "description": "Le pack des adieux personnalisés vous mentionne 'Au Revoir' un nombre limité de fois dans différentes langues comme par exemple en Hindi, Espagnol, Italien.",
+        "smallIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_108.png",
+        "largeIconUri": "https://s3.amazonaws.com/ask-samples-resources/icons/moneyicon_512.png",
+        "examplePhrases": [
+          "Alexa, achètes le pack des adieux personnalisés"
+        ],
+        "keywords": [
+          "au revoir",
+          "adieu"
+        ],
+        "customProductPrompts": {
+          "purchasePromptDescription": "Le pack des adieux personnalisés vous mentionne 'Au Revoir' un nombre limité de fois dans différentes langues comme par exemple en Hindi, Espagnol et Italien.",
+          "boughtCardDescription": "Vous venez d'acheter le pack des adieux qui permet de dire 'Au Revoir' dans différentes langues comme par exemple en Hindi, Allemand, Japonais."
+        }
       }
     },
     "distributionCountries": [
@@ -126,7 +144,8 @@
       "UA",
       "US",
       "ES",
-      "IT"
+      "IT",
+      "FR"
     ],
     "pricing": {
       "amazon.es": {
@@ -170,6 +189,13 @@
           "price": 0.99,
           "currency": "EUR"
         }
+      },
+      "amazon.fr": {
+        "releaseDate": "2019-11-20T00:00Z",
+        "defaultPriceListing": {
+          "price": 0.99,
+          "currency": "EUR"
+        }
       }
     },
     "taxInformation": {
@@ -192,6 +218,9 @@
       },
       "en-GB": {
         "privacyPolicyUrl": "http://www.amazon.co.uk/privacy"
+      },
+      "fr-FR": {
+        "privacyPolicyUrl": "http://www.amazon.fr/privacy"
       }
     }
   },
