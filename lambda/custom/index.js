@@ -1,4 +1,4 @@
-const Alexa = require('ask-sdk');
+const Alexa = require('ask-sdk-core');
 const utils = require("./utils");
 
 const LaunchRequestHandler = {
@@ -409,7 +409,7 @@ const ErrorHandler = {
   }
 };
 
-const skillBuilder = Alexa.SkillBuilders.standard();
+const skillBuilder = Alexa.SkillBuilders.custom();
 
 exports.handler = skillBuilder
   .addRequestHandlers(
@@ -431,7 +431,7 @@ exports.handler = skillBuilder
     utils.LoadAttributesRequestInterceptor,
     utils.LocalisationRequestInterceptor)
   .addResponseInterceptors(utils.SaveAttributesResponseInterceptor)
-  .withTableName("premium-hello-world") // requires that you allow DynamoDB access in your Lambda role!
-  .withAutoCreateTable(true)
+  .withPersistenceAdapter(utils.getPersistenceAdapter())
+  .withApiClient(new Alexa.DefaultApiClient())
   .withCustomUserAgent('sample/premium-hello-world/v1.2')
   .lambda();

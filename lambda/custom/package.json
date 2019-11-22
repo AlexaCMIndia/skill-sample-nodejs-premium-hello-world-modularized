@@ -9,7 +9,10 @@
   "author": "Amazon Alexa",
   "license": "ASL",
   "dependencies": {
-    "ask-sdk": "^2.7.0",
+    "ask-sdk-core": "^2.7.0",
+    "ask-sdk-model": "^1.24.0",
+    "ask-sdk-s3-persistence-adapter": "^2.7.0",
+    "ask-sdk-dynamodb-persistence-adapter": "^2.7.0",
     "i18next": "^15.0.5",
     "aws-sdk": "^2.326.0"
   }
