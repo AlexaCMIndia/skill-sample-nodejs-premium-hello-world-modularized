@@ -1,0 +1,155 @@
+{
+	"interactionModel": {
+		"languageModel": {
+			"invocationName": "ciao mondo premium uno",
+			"intents": [
+				{
+					"name": "AMAZON.CancelIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.HelpIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.StopIntent",
+					"samples": []
+				},
+				{
+					"name": "SimpleHelloIntent",
+					"slots": [],
+					"samples": [
+						"ciao"
+					]
+				},
+				{
+					"name": "AMAZON.NavigateHomeIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.YesIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.NoIntent",
+					"samples": []
+				},
+				{
+					"name": "AvailableProductsIntent",
+					"slots": [],
+					"samples": [
+						"cosa posso comprare",
+						"cosa posso acquistare",
+						"prodotti disponibili"
+					]
+				},
+				{
+					"name": "DescribeProductIntent",
+					"slots": [
+						{
+							"name": "product",
+							"type": "productType"
+						}
+					],
+					"samples": [
+						"cos'è il prodotto {product}",
+						"voglio sapere di più del prodotto {product}",
+						"dammi più informazioni su {product}",
+						"spiegami il prodotto {product}"
+					]
+				},
+				{
+					"name": "BuyProductIntent",
+					"slots": [
+						{
+							"name": "product",
+							"type": "productType",
+							"samples": [
+								"voglio comprare il {product}",
+								"voglio comprare la {product}",
+								"voglio comprare {product}",
+								"voglio acquistare il {product}",
+								"voglio acquistare la {product}",
+								"voglio acquistare {product}",
+								"il {product}",
+								"la {product}",
+								"{product}"
+							]
+						}
+					],
+					"samples": [
+						"voglio comprare",
+						"compra",
+						"comprare",
+						"dammi {product}",
+						"acquista {product}",
+						"compra {product}",
+						"{product}",
+						"iscrivimi a {product}",
+						"dammi il {product}",
+						"acquista il {product}",
+						"compra il {product}",
+						"iscrivimi al {product}",
+						"dammi la {product}",
+						"acquista la {product}",
+						"compra la {product}",
+						"iscrivimi a la {product}"
+					]
+				}
+			],
+			"types": [
+				{
+					"name": "productType",
+					"values": [
+						{
+							"id": "Greetings_Pack",
+							"name": {
+								"value": "pacchetto di saluti",
+								"synonyms": [
+									"saluti speciali",
+									"saluto speciale"
+								]
+							}
+						}
+					]
+				}
+			]
+		},
+		"dialog": {
+			"intents": [
+				{
+					"name": "DescribeProductIntent",
+					"delegationStrategy": "SKILL_RESPONSE",
+					"confirmationRequired": false,
+					"prompts": {},
+					"slots": [
+						{
+							"name": "product",
+							"type": "productType",
+							"confirmationRequired": false,
+							"elicitationRequired": false,
+							"prompts": {}
+						}
+					]
+				},
+				{
+					"name": "BuyProductIntent",
+					"delegationStrategy": "ALWAYS",
+					"confirmationRequired": false,
+					"prompts": {},
+					"slots": [
+						{
+							"name": "product",
+							"type": "productType",
+							"confirmationRequired": false,
+							"elicitationRequired": false,
+							"prompts": {}
+						}
+					]
+				}
+			],
+			"delegationStrategy": "ALWAYS"
+		},
+		"prompts": []
+	}
+}

@@ -1,0 +1,141 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "premium hello world one",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "SimpleHelloIntent",
+                    "slots": [],
+                    "samples": [
+                        "hello"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AvailableProductsIntent",
+                    "slots": [],
+                    "samples": [
+                        "what can I purchase",
+                        "what can I buy",
+                        "purchase options"
+                    ]
+                }
+                {
+                    "name": "DescribeProductIntent",
+                    "slots": [
+                        {
+                            "name": "product",
+                            "type": "productType"
+                        }
+                    ],
+                    "samples": [
+                        "what is {product}",
+                        "tell me more about {product}",
+                        "more information about {product}",
+                        "give me more information about {product}"
+                    ]
+                },
+                {
+                    "name": "BuyProductIntent",
+                    "slots": [
+                        {
+                            "name": "product",
+                            "type": "productType",
+                            "samples": [
+                                "I want to buy the {product}",
+                                "I want to buy {product}",
+                                "the {product}",
+                                "{product}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "i want to buy",
+                        "purchase",
+                        "buy",
+                        "give me {product}",
+                        "get {product}",
+                        "buy {product}",
+                        "sign up to {product}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "productType",
+                    "values": [
+                        {
+                            "id": "Greetings_Pack",
+                            "name": {
+                                "value": "greetings pack",
+                                "synonyms": [
+                                    "special greetings",
+                                    "special greeting"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "DescribeProductIntent",
+                    "delegationStrategy": "SKILL_RESPONSE",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "product",
+                            "type": "productType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "BuyProductIntent",
+                    "delegationStrategy": "ALWAYS",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "product",
+                            "type": "productType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": []
+    }
+}

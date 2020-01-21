@@ -1,0 +1,68 @@
+{
+  "deploy_settings": {
+    "default": {
+      "skill_id": "amzn1.ask.skill.03f8a9db-f6ca-47bf-9018-5d6089f6658a",
+      "was_cloned": false,
+      "merge": {},
+      "in_skill_products": [
+        {
+          "deploy_status": "Update",
+          "filePath": "isps/entitlement/Greetings_Pack.json",
+          "productId": "amzn1.adg.product.83ecc613-30de-46f1-b48f-39939d5066f5",
+          "eTag": "ea5add358cd1f3fcfb36d3c9cdc0b090"
+        },
+        {
+          "deploy_status": "Update",
+          "filePath": "isps/consumable/Goodbyes_Pack.json",
+          "productId": "amzn1.adg.product.429df469-47b2-4684-840a-b078604acd1d",
+          "eTag": "435d4508eeda9e19cbaa22d86991618c"
+        },
+        {
+          "deploy_status": "Update",
+          "filePath": "isps/subscription/Premium_Subscription.json",
+          "productId": "amzn1.adg.product.3ddb00ab-1c6b-4657-883b-e35d71f0f969",
+          "eTag": "133b978c3178b69c2396e9b57a4dad50"
+        }
+      ],
+      "resources": {
+        "manifest": {
+          "eTag": "d44704bdfa3b9d3e74e8298a4430440d"
+        },
+        "interactionModel": {
+          "en-GB": {
+            "eTag": "c70832b2475fd90b3d5c9942a9e3e59c"
+          },
+          "en-US": {
+            "eTag": "6a31210d020acc01cd801a02e93816a5"
+          },
+          "es-US": {
+            "eTag": "36fc57994c51bb379cc15afbe83e885f"
+          },
+          "es-ES": {
+            "eTag": "a8e8b2d40cd96fc1ffef3fa5718b0bbb"
+          },
+          "it-IT": {
+            "eTag": "d5da3e29ecedd8a6672edb6d89e1afd7"
+          },
+          "fr-FR": {
+            "eTag": "c2443f56bbd7919ec1d823046ccc8b2a"
+          }
+        },
+        "lambda": [
+          {
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "arn": "arn:aws:lambda:eu-west-1:067686764935:function:ask-premium-hello-world",
+            "awsRegion": "eu-west-1",
+            "codeUri": "lambda/custom",
+            "functionName": "ask-premium-hello-world",
+            "handler": "index.handler",
+            "revisionId": "2987966b-1a32-46c5-b41b-8e419919b5b4",
+            "runtime": "nodejs8.10"
+          }
+        ]
+      }
+    }
+  }
+}
