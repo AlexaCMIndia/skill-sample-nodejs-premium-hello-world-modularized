@@ -45,116 +45,72 @@
                 },
                 {
                     "name": "DescribeProductIntent",
-                    "slots": [
-                        {
-                            "name": "product",
-                            "type": "productType"
-                        }
-                    ],
+                    "slots": [],
                     "samples": [
-                        "qué es el {product}",
-                        "qué es la {product}",
-                        "quiero saber más sobre el {product}",
-                        "quiero saber más sobre la {product}",
-                        "más información sobre el {product}",
-                        "más información sobre la {product}",
-                        "más información sobre {product}",
-                        "dame más información sobre el {product}",
-                        "dame más información sobre la {product}",
-                        "dame más información sobre {product}",
-                        "quiero más información sobre el {product}",
-                        "quiero más información sobre la {product}",
-                        "quiero más información sobre {product}"
+                        "qué es el paquete de bienvenidas",
+                        "quiero saber más sobre el paquete de bienvenidas",
+                        "más información sobre el paquete de bienvenidas",
+                        "más información sobre paquete de bienvenidas",
+                        "dame más información sobre el paquete de bienvenidas",
+                        "dame más información sobre paquete de bienvenidas",
+                        "quiero más información sobre el paquete de bienvenidas",
+                        "quiero más información sobre paquete de bienvenidas",
+                        "paquete de bienvenidas",
+                        "el paquete de bienvenidas",
+                        "qué son las bienvenidas especiales",
+                        "quiero saber más sobre las bienvenidas especiales",
+                        "más información sobre las bienvenidas especiales",
+                        "más información sobre bienvenidas especiales",
+                        "dame más información sobre las bienvenidas especiales",
+                        "dame más información sobre bienvenidas especiales",
+                        "quiero más información sobre las bienvenidas especiales",
+                        "quiero más información sobre bienvenidas especiales",
+                        "las bienvenidas especiales",
+                        "bienvenidas especiales",
+                        "qué es la bienvenida especial",
+                        "quiero saber más sobre la bienvenida especial",
+                        "más información sobre la bienvenida especial",
+                        "más información sobre bienvenida especial",
+                        "dame más información sobre la bienvenida especial",
+                        "dame más información sobre bienvenida especial",
+                        "quiero más información sobre la bienvenida especial",
+                        "quiero más información sobre bienvenida especial",
+                        "la bienvenida especial",
+                        "bienvenida especial"
                     ]
                 },
                 {
                     "name": "BuyProductIntent",
-                    "slots": [
-                        {
-                            "name": "product",
-                            "type": "productType",
-                            "samples": [
-                                "quiero comprar el {product}",
-                                "quiero comprar la {product}",
-                                "quiero comprar {product}",
-                                "el {product}",
-                                "la {product}",
-                                "{product}"
-                            ]
-                        }
-                    ],
+                    "slots": [],
                     "samples": [
-                        "quiero comprar",
-                        "comprar",
-                        "compra",
-                        "dame {product}",
-                        "adquirir {product}",
-                        "comprar {product}",
-                        "{product}",
-                        "suscríbeme a {product}",
-                        "dame el {product}",
-                        "adquirir el {product}",
-                        "comprar el {product}",
-                        "suscríbeme al {product}",
-                        "dame la {product}",
-                        "adquirir la {product}",
-                        "comprar la {product}",
-                        "suscríbeme a la {product}"
+                        "quiero comprar el paquete de bienvenidas",
+                        "quiero comprar las bienvenidas especiales",
+                        "quiero comprar la bienvenida especial",
+                        "quiero comprar paquete de bienvenidas",
+                        "adquirir paquete de bienvenidas",
+                        "comprar paquete de bienvenidas",
+                        "dame paquete de bienvenidas",
+                        "quiero comprar bienvenidas especiales",
+                        "adquirir bienvenidas especiales",
+                        "comprar bienvenidas especiales",
+                        "dame bienvenidas especiales",
+                        "quiero comprar bienvenida especial",
+                        "adquirir bienvenida especial",
+                        "comprar bienvenida especial",
+                        "dame bienvenida especial",
+                        "dame el paquete de bienvenidas",
+                        "adquirir el paquete de bienvenidas",
+                        "comprar el paquete de bienvenidas",
+                        "dame las bienvenidas especiales",
+                        "adquirir las bienvenidas especiales",
+                        "comprar las bienvenidas especiales",
+                        "dame la bienvenida especial",
+                        "adquirir la bienvenida especial",
+                        "comprar la bienvenida especial"
                     ]
                 }
             ],
-            "types": [
-                {
-                    "name": "productType",
-                    "values": [
-                        {
-                            "id": "Greetings_Pack",
-                            "name": {
-                                "value": "paquete de bienvenidas",
-                                "synonyms": [
-                                    "bienvenidas especiales",
-                                    "bienvenida especial"
-                                ]
-                            }
-                        }
-                    ]
-                }
-            ]
-        },
-        "dialog": {
-            "intents": [
-                {
-                    "name": "DescribeProductIntent",
-                    "delegationStrategy": "SKILL_RESPONSE",
-                    "confirmationRequired": false,
-                    "prompts": {},
-                    "slots": [
-                        {
-                            "name": "product",
-                            "type": "productType",
-                            "confirmationRequired": false,
-                            "elicitationRequired": false,
-                            "prompts": {}
-                        }
-                    ]
-                },
-                {
-                    "name": "BuyProductIntent",
-                    "delegationStrategy": "ALWAYS",
-                    "confirmationRequired": false,
-                    "prompts": {},
-                    "slots": [
-                        {
-                            "name": "product",
-                            "type": "productType",
-                            "confirmationRequired": false,
-                            "elicitationRequired": false,
-                            "prompts": {}
-                        }
-                    ]
-                }
-            ],
-            "delegationStrategy": "ALWAYS"
+            "types": []
         },
         "prompts": []
     }

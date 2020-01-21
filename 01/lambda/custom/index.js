@@ -78,7 +78,7 @@ const DescribeProductIntentHandler = {
     },
     async handle(handlerInput) {
         console.log('Handler: DescribeProductIntentHandler');
-        const productReferenceName = Alexa.getSlot(handlerInput.requestEnvelope, 'product').resolutions.resolutionsPerAuthority[0].values[0].value.id;
+        const productReferenceName = 'Greetings_Pack';
         const locale = Alexa.getLocale(handlerInput.requestEnvelope);
         let speechOutput, repromptOutput;
 
@@ -92,6 +92,7 @@ const DescribeProductIntentHandler = {
         if (product) {
             // since they are interested and it's purchasable we can try to upsell the product
             const upsellMessage = `${speechOutput + handlerInput.t('LEARN_MORE_PROMPT')}`;
+            // upsell directive is similar to the buy directive but allows you to pass a custom message + user confirmation
             return utils.upsellDirective(handlerInput, upsellMessage, product);
         } else {
             speechOutput = handlerInput.t('NO_PURCHASABLE_PRODUCT_MSG') + ' ' + handlerInput.t('YES_NO_QUESTION');
@@ -112,7 +113,7 @@ const BuyProductIntentHandler = {
     },
     async handle(handlerInput) {
         console.log('Handler: BuyProductIntentHandler');
-        const productReferenceName = Alexa.getSlot(handlerInput.requestEnvelope, 'product').resolutions.resolutionsPerAuthority[0].values[0].value.id;
+        const productReferenceName = 'Greetings_Pack';
         const locale = Alexa.getLocale(handlerInput.requestEnvelope);
         let speechOutput, repromptOutput;
 
@@ -209,7 +210,12 @@ const CancelAndStopIntentHandler = {
         const locale = Alexa.getLocale(handlerInput.requestEnvelope);
         const monetizationClient = handlerInput.serviceClientFactory.getMonetizationServiceClient();
         const productList = await monetizationClient.getInSkillProducts(locale);
-        return utils.getPremiumOrRandomGoodbye(handlerInput, productList.inSkillProducts);
+        speechOutput = handlerInput.t('SIMPLE_GOODBYES');
+
+        return handlerInput.responseBuilder
+            .speak(speechOutput)
+            .withShouldEndSession(true)
+            .getResponse();
     }
 };
 
@@ -255,10 +261,7 @@ exports.handler = skillBuilder
     .addErrorHandlers(ErrorHandler)
     .addRequestInterceptors(
         utils.LogRequestInterceptor,
-        utils.LoadAttributesRequestInterceptor,
         utils.LocalisationRequestInterceptor)
-    .addResponseInterceptors(utils.SaveAttributesResponseInterceptor)
-    .withPersistenceAdapter(utils.getPersistenceAdapter())
     .withApiClient(new Alexa.DefaultApiClient())
-    .withCustomUserAgent('sample/premium-hello-world/v1.2')
+    .withCustomUserAgent('sample/premium-hello-world/v1.2.1')
     .lambda();

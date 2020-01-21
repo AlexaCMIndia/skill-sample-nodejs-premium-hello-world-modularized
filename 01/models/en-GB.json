@@ -42,99 +42,60 @@
                         "what can I buy",
                         "purchase options"
                     ]
-                }
+                },
                 {
                     "name": "DescribeProductIntent",
-                    "slots": [
-                        {
-                            "name": "product",
-                            "type": "productType"
-                        }
-                    ],
+                    "slots": [],
                     "samples": [
-                        "what is {product}",
-                        "tell me more about {product}",
-                        "more information about {product}",
-                        "give me more information about {product}"
+                        "what is the greetings pack",
+                        "tell me more about the greetings pack",
+                        "more information about greetings pack",
+                        "give me more information about greetings pack",
+                        "what is special greetings",
+                        "tell me more about special greetings",
+                        "more information about special greetings",
+                        "give me more information about special greetings",
+                        "what is the special greeting",
+                        "tell me more about the special greeting",
+                        "more information about special greeting",
+                        "give me more information about special greeting",
+                        "greetings pack",
+                        "special greetings",
+                        "special greeting"
                     ]
                 },
                 {
                     "name": "BuyProductIntent",
-                    "slots": [
-                        {
-                            "name": "product",
-                            "type": "productType",
-                            "samples": [
-                                "I want to buy the {product}",
-                                "I want to buy {product}",
-                                "the {product}",
-                                "{product}"
-                            ]
-                        }
-                    ],
+                    "slots": [],
                     "samples": [
-                        "i want to buy",
-                        "purchase",
-                        "buy",
-                        "give me {product}",
-                        "get {product}",
-                        "buy {product}",
-                        "sign up to {product}"
+                        "give me greetings pack",
+                        "get greetings pack",
+                        "buy greetings pack",
+                        "sign up to greetings pack",
+                        "I want to buy the greetings pack",
+                        "I want to buy greetings pack",
+                        "the greetings pack",
+                        "get the greetings pack",
+                        "give me special greetings",
+                        "get special greetings",
+                        "buy special greetings",
+                        "sign up to special greetings",
+                        "I want to buy the special greetings",
+                        "I want to buy special greetings",
+                        "the special greetings",
+                        "get the special greetings",
+                        "give me special greeting",
+                        "get special greeting",
+                        "buy special greeting",
+                        "sign up to special greeting",
+                        "I want to buy the special greeting",
+                        "I want to buy special greeting",
+                        "the special greeting",
+                        "get the special greeting"
                     ]
                 }
             ],
-            "types": [
-                {
-                    "name": "productType",
-                    "values": [
-                        {
-                            "id": "Greetings_Pack",
-                            "name": {
-                                "value": "greetings pack",
-                                "synonyms": [
-                                    "special greetings",
-                                    "special greeting"
-                                ]
-                            }
-                        }
-                    ]
-                }
-            ]
-        },
-        "dialog": {
-            "intents": [
-                {
-                    "name": "DescribeProductIntent",
-                    "delegationStrategy": "SKILL_RESPONSE",
-                    "confirmationRequired": false,
-                    "prompts": {},
-                    "slots": [
-                        {
-                            "name": "product",
-                            "type": "productType",
-                            "confirmationRequired": false,
-                            "elicitationRequired": false,
-                            "prompts": {}
-                        }
-                    ]
-                },
-                {
-                    "name": "BuyProductIntent",
-                    "delegationStrategy": "ALWAYS",
-                    "confirmationRequired": false,
-                    "prompts": {},
-                    "slots": [
-                        {
-                            "name": "product",
-                            "type": "productType",
-                            "confirmationRequired": false,
-                            "elicitationRequired": false,
-                            "prompts": {}
-                        }
-                    ]
-                }
-            ],
-            "delegationStrategy": "ALWAYS"
+            "types": []
         },
         "prompts": []
     }
