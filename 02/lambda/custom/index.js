@@ -92,6 +92,7 @@ const DescribeProductIntentHandler = {
         if (product) {
             // since they are interested and it's purchasable we can try to upsell the product
             const upsellMessage = `${speechOutput + handlerInput.t('LEARN_MORE_PROMPT')}`;
+            // upsell directive is similar to the buy directive but allows you to pass a custom message + user confirmation
             return utils.upsellDirective(handlerInput, upsellMessage, product);
         } else {
             speechOutput = handlerInput.t('NO_PURCHASABLE_PRODUCT_MSG') + ' ' + handlerInput.t('YES_NO_QUESTION');
@@ -176,62 +177,6 @@ const UpsellOrBuyResponseHandler = {
         console.log('Connections.Response indicated failure. error: ' + request.payload.message);
         return handlerInput.responseBuilder
             .speak(handlerInput.t('BUY_ERROR_MSG'))
-            .getResponse();
-    }
-};
-
-const PurchaseHistoryIntentHandler = {
-    canHandle(handlerInput) {
-        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'PurchaseHistoryIntent';
-    },
-    async handle(handlerInput) {
-        console.log('Handler: PurchaseHistoryIntentHandler');
-        const locale = Alexa.getLocale(handlerInput.requestEnvelope);
-
-        const monetizationClient = handlerInput.serviceClientFactory.getMonetizationServiceClient();
-        // productList contains the list of all ISP products for this skill.
-        const productList = await monetizationClient.getInSkillProducts(locale);
-        const entitledProducts = productList.inSkillProducts.filter(item => item.entitled === 'ENTITLED')
-        if (entitledProducts && entitledProducts.length > 0) {
-            const speechOutput = handlerInput.t('BOUGHT_SOMETHING_MSG') + ' ' + utils.getSpeakableListOfProducts(entitledProducts, handlerInput) + '. ' + handlerInput.t('YES_NO_QUESTION');
-
-            return handlerInput.responseBuilder
-                .speak(speechOutput)
-                .reprompt(speechOutput)
-                .getResponse();
-        }
-
-        const speechOutput = handlerInput.t('BOUGHT_NOTHING_MSG') + ' ' + handlerInput.t('YES_NO_QUESTION');
-
-        return handlerInput.responseBuilder
-            .speak(speechOutput)
-            .reprompt(speechOutput)
-            .getResponse();
-    }
-};
-
-const InventoryIntentHandler = {
-    canHandle(handlerInput) {
-        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'InventoryIntent';
-    },
-    async handle(handlerInput) {
-        console.log('Handler: InventoryIntentHandler');
-        const locale = Alexa.getLocale(handlerInput.requestEnvelope);
-
-        const monetizationClient = handlerInput.serviceClientFactory.getMonetizationServiceClient();
-        // productList contains the list of all ISP products for this skill.
-        const productList = await monetizationClient.getInSkillProducts(locale);
-        // In the list of products available for purchase find the goodbyes pack
-        const goodbyesPackProduct = productList.inSkillProducts.find(item => item.referenceName === 'Goodbyes_Pack');
-        const availableGoodbyes = parseInt(utils.getRemainingCredits(handlerInput, goodbyesPackProduct, 'goodbyesUsed', utils.GOODBYES_PER_ENTITLEMENT).availableCredits) || 0;
-        let speechOutput = handlerInput.t('AVAILABLE_CREDITS_MSG', { count: availableGoodbyes });
-        availableGoodbyes ? speechOutput += handlerInput.t('CREDITS_FOLLOWUP_STOCK') : speechOutput += handlerInput.t('CREDITS_FOLLOWUP_NO_STOCK');
-        const repromptOutput = handlerInput.t('YES_NO_QUESTION');
-        return handlerInput.responseBuilder
-            .speak(speechOutput)
-            .reprompt(repromptOutput)
             .getResponse();
     }
 };
@@ -337,7 +282,12 @@ const CancelAndStopIntentHandler = {
         const locale = Alexa.getLocale(handlerInput.requestEnvelope);
         const monetizationClient = handlerInput.serviceClientFactory.getMonetizationServiceClient();
         const productList = await monetizationClient.getInSkillProducts(locale);
-        return utils.getPremiumOrRandomGoodbye(handlerInput, productList.inSkillProducts);
+        speechOutput = handlerInput.t('SIMPLE_GOODBYES');
+
+        return handlerInput.responseBuilder
+            .speak(speechOutput)
+            .withShouldEndSession(true)
+            .getResponse();
     }
 };
 
@@ -377,8 +327,6 @@ exports.handler = skillBuilder
         DescribeProductIntentHandler,
         BuyProductIntentHandler,
         UpsellOrBuyResponseHandler,
-        PurchaseHistoryIntentHandler,
-        InventoryIntentHandler,
         RefundProductIntentHandler,
         CancelProductResponseHandler,
         HelpIntentHandler,
@@ -387,10 +335,7 @@ exports.handler = skillBuilder
     .addErrorHandlers(ErrorHandler)
     .addRequestInterceptors(
         utils.LogRequestInterceptor,
-        utils.LoadAttributesRequestInterceptor,
         utils.LocalisationRequestInterceptor)
-    .addResponseInterceptors(utils.SaveAttributesResponseInterceptor)
-    .withPersistenceAdapter(utils.getPersistenceAdapter())
     .withApiClient(new Alexa.DefaultApiClient())
-    .withCustomUserAgent('sample/premium-hello-world/v1.2')
+    .withCustomUserAgent('sample/premium-hello-world/v1.2.2')
     .lambda();

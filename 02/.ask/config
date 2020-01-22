@@ -12,10 +12,6 @@
         },
         {
           "deploy_status": "Add",
-          "filePath": "isps/consumable/Goodbyes_Pack.json"
-        },
-        {
-          "deploy_status": "Add",
           "filePath": "isps/subscription/Premium_Subscription.json"
         }
       ]

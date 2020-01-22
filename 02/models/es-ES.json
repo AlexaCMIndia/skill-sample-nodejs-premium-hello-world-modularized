@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "hola mundo premium",
+            "invocationName": "hola mundo premium dos",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
@@ -44,18 +44,6 @@
                     ]
                 },
                 {
-                    "name": "PurchaseHistoryIntent",
-                    "slots": [],
-                    "samples": [
-                        "historial de compras",
-                        "historial de pedidos",
-                        "qué he adquirido",
-                        "qué he comprado",
-                        "qué he ordenado",
-                        "mis compras"
-                    ]
-                },
-                {
                     "name": "DescribeProductIntent",
                     "slots": [
                         {
@@ -76,7 +64,10 @@
                         "dame más información sobre {product}",
                         "quiero más información sobre el {product}",
                         "quiero más información sobre la {product}",
-                        "quiero más información sobre {product}"
+                        "quiero más información sobre {product}",
+                        "el {product}",
+                        "la {product}",
+                        "{product}"
                     ]
                 },
                 {
@@ -102,7 +93,6 @@
                         "dame {product}",
                         "adquirir {product}",
                         "comprar {product}",
-                        "{product}",
                         "suscríbeme a {product}",
                         "dame el {product}",
                         "adquirir el {product}",
@@ -112,23 +102,6 @@
                         "adquirir la {product}",
                         "comprar la {product}",
                         "suscríbeme a la {product}"
-                    ]
-                },
-                {
-                    "name": "InventoryIntent",
-                    "slots": [],
-                    "samples": [
-                        "inventario",
-                        "cúal es mi inventario",
-                        "mi inventario",
-                        "inventario actual",
-                        "qué número de despedidas tengo",
-                        "cuantas despedidas tengo",
-                        "cuantas despedidas tengo actualmente",
-                        "cuantas despedidas me quedan",
-                        "despedidas restantes",
-                        "cuántos créditos tengo",
-                        "cuántos créditos me quedan"
                     ]
                 },
                 {
@@ -181,16 +154,6 @@
                             }
                         },
                         {
-                            "id": "Goodbyes_Pack",
-                            "name": {
-                                "value": "paquete de despedidas",
-                                "synonyms": [
-                                    "despedidas especiales",
-                                    "despedida especial"
-                                ]
-                            }
-                        },
-                        {
                             "id": "Greetings_Pack",
                             "name": {
                                 "value": "paquete de bienvenidas",
@@ -216,8 +179,10 @@
                             "name": "product",
                             "type": "productType",
                             "confirmationRequired": false,
-                            "elicitationRequired": false,
-                            "prompts": {}
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.593674792803.723737651317"
+                            }
                         }
                     ]
                 },
@@ -267,7 +232,7 @@
                     },
                     {
                         "type": "PlainText",
-                        "value": "quieres saber más sobre el paquete de bienvenidas, la suscripción premium o el paquete de despedidas?"
+                        "value": "quieres saber más sobre el paquete de bienvenidas o la suscripción premium?"
                     }
                 ]
             },
@@ -276,7 +241,7 @@
                 "variations": [
                     {
                         "type": "PlainText",
-                        "value": "quieres comprar el paquete de bienvenidas, la suscripción premium o el paquete de despedidas?"
+                        "value": "quieres comprar el paquete de bienvenidas o la suscripción premium?"
                     },
                     {
                         "type": "PlainText",
@@ -289,7 +254,7 @@
                 "variations": [
                     {
                         "type": "PlainText",
-                        "value": "quieres un reembolso del paquete de bienvenidas, la suscripción premium o el paquete de despedidas?"
+                        "value": "quieres un reembolso del paquete de bienvenidas o la suscripción premium?"
                     },
                     {
                         "type": "PlainText",

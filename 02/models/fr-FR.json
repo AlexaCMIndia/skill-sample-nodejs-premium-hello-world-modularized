@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "le génie des salutations premium",
+            "invocationName": "le génie des salutations premium deux",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
@@ -51,18 +51,6 @@
                     ]
                 },
                 {
-                    "name": "PurchaseHistoryIntent",
-                    "slots": [],
-                    "samples": [
-                        "quel est mon historique d'achat",
-                        "quels produits j'ai acheté",
-                        "donne-moi la liste des produits achetés",
-                        "dis-moi mon historique d'achat",
-                        "donne-moi mon historique d'achat",
-                        "historique"
-                    ]
-                },
-                {
                     "name": "DescribeProductIntent",
                     "slots": [
                         {
@@ -85,7 +73,11 @@
                         "donne-moi plus d'informations sur le produit {product}",
                         "donne-moi plus la description de {product}",
                         "donne-moi plus la description du produit {product}",
-                        "quel est le produit {product}"
+                        "quel est le produit {product}",
+                        {product}",
+                        "le {product}",
+                        "le produit {product}",
+                        "description {product}"
                     ]
                 },
                 {
@@ -112,19 +104,6 @@
                         "commande {product}",
                         "achètes {product}",
                         "achètes le produit {product}"
-                    ]
-                },
-                {
-                    "name": "InventoryIntent",
-                    "slots": [],
-                    "samples": [
-                        "inventaire",
-                        "quel est mon inventaire",
-                        "combien d'adieux reste-t-il",
-                        "combien d'adieux j'ai",
-                        "dis-moi le nombre d'adieux qu'il me reste",
-                        "adieux restant",
-                        "nombre d'adieux restant"
                     ]
                 },
                 {
@@ -169,21 +148,6 @@
                                 "synonyms": [
                                     "abonnement premium",
                                     "premium"
-                                ]
-                            }
-                        },
-                        {
-                            "id": "Goodbyes_Pack",
-                            "name": {
-                                "value": "adieux",
-                                "synonyms": [
-                                    "adieux personnalisés",
-                                    "au revoir spécial",
-                                    "au revoir spéciaux",
-                                    "au revoir personnalisé",
-                                    "pack des au revoir personnalisés",
-                                    "pack des au revoir speciaux",
-                                    "pack des adieux personnalisés"
                                 ]
                             }
                         },
@@ -266,7 +230,7 @@
                 "variations": [
                     {
                         "type": "PlainText",
-                        "value": "Lequel de ces produits vous intéressent, salutations spéciales, adieux personnalisés ou abonnement premium ?"
+                        "value": "Lequel de ces produits vous intéressent, salutations spéciales ou abonnement premium?"
                     }
                 ]
             },
@@ -275,7 +239,7 @@
                 "variations": [
                     {
                         "type": "PlainText",
-                        "value": "Lequel de ces produits voulez-vous acheter, salutations spéciales, adieux personnalisés ou abonnement premium ?"
+                        "value": "Lequel de ces produits voulez-vous acheter, salutations spéciales ou abonnement premium?"
                     }
                 ]
             },
@@ -284,7 +248,7 @@
                 "variations": [
                     {
                         "type": "PlainText",
-                        "value": "Souhaitez-vous un remboursement pour le pack des salutations spéciales, l'abonnement premium ou bien le pack des adieux ?"
+                        "value": "Souhaitez-vous un remboursement pour le pack des salutations spéciales ou l'abonnement premium?"
                     }
                 ]
             }
