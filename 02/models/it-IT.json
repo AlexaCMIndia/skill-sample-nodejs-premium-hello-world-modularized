@@ -44,28 +44,17 @@
 					]
 				},
 				{
-					"name": "PurchaseHistoryIntent",
-					"slots": [],
-					"samples": [
-						"cosa ho comprato",
-						"cosa ho acquistato",
-						"acquisti passati",
-						"cosa ho già comprato",
-						"i miei acquisti"
-					]
-				},
-				{
 					"name": "DescribeProductIntent",
 					"slots": [
 						{
 							"name": "product",
-                            "type": "productType",
-                            "samples": [
-                                "il prodotto {product}",
-                                "il {product}",
-                                "la {product}",
-                                "{product}"
-                            ]
+                                                        "type": "productType",
+                                                        "samples": [
+                                                                "il prodotto {product}",
+                                                                "il {product}",
+                                                                "la {product}",
+                                                                "{product}"
+                                                        ]
 						}
 					],
 					"samples": [
@@ -117,21 +106,6 @@
 					]
 				},
 				{
-					"name": "InventoryIntent",
-					"slots": [],
-					"samples": [
-						"inventario",
-						"cos'è il mii inventario",
-						"mio inventario",
-						"inventario attuale",
-						"quanti saluti ho",
-						"quanti saluti ho ancora",
-						"saluti rimanenti",
-						"quanto credito tengo",
-						"quanti crediti mi rimangono"
-					]
-				},
-				{
 					"name": "RefundProductIntent",
 					"slots": [
 						{
@@ -172,16 +146,6 @@
 							}
 						},
 						{
-							"id": "Goodbyes_Pack",
-							"name": {
-								"value": "pacchetto di addii",
-								"synonyms": [
-									"addii speciali",
-									"addio speciale"
-								]
-							}
-						},
-						{
 							"id": "Greetings_Pack",
 							"name": {
 								"value": "pacchetto di saluti",
@@ -200,19 +164,19 @@
 				{
 					"name": "DescribeProductIntent",
 					"delegationStrategy": "ALWAYS",
-                    "confirmationRequired": false,
+                                        "confirmationRequired": false,
 					"prompts": {},
 					"slots": [
-                        {
-                            "name": "product",
-                            "type": "productType",
-                            "confirmationRequired": false,
-                            "elicitationRequired": true,
-                            "prompts": {
-                                "elicitation": "Elicit.Slot.593674792803.723737651317"
-                            }
-                        }
-                    ]
+                                            {
+                                                "name": "product",
+                                                "type": "productType",
+                                                "confirmationRequired": false,
+                                                "elicitationRequired": true,
+                                                "prompts": {
+                                                    "elicitation": "Elicit.Slot.593674792803.723737651317"
+                                                }
+                                            }
+                                        ]
 				},
 				{
 					"name": "BuyProductIntent",

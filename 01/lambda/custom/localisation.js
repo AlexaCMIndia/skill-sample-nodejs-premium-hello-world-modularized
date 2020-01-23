@@ -13,10 +13,10 @@ module.exports = {
             PRODUCT_LIST_MSG: 'Products available for purchase at this time are {{products}}. To learn more about a product, say, Tell me more about. followed by the product name. If you are ready to buy, say. Buy. followed by the product name. So what can I help you with?',
             NO_PURCHASABLE_PRODUCT_MSG: 'There\'s nothing you can buy. Sorry about that.',
             LEARN_MORE_PROMPT: [
-                'I\'ll get more information about the product. Would you wait for me?',
-                'I\'ll get you more details about the product. Can you wait for me?',
-                'Let me fetch you the details. Can you stand by?',
-                'Can you wait a little bit while I get you more details?'
+                'I\'ll get more information about the product. Okey?',
+                'I\'ll get you more details about the product. Do you agree?',
+                'Let me fetch you the details. Is that fine?',
+                'Are you interested in getting more details?'
             ],
             SIMPLE_GREETINGS: ['Howdy!', 'Hello!', 'How are you?', 'Hiya!', 'What\'s up?'],
             SIMPLE_GREETING: 'Here\'s your simple greeting. {{greeting}}.',
@@ -56,10 +56,10 @@ module.exports = {
             PRODUCT_LIST_MSG: 'Los productos que puedes comprar son {{products}}. Para saber más sobre un producto, solo dí. Más información sobre. seguido del nombre del producto. Si ya quieres comprar, solo dí. Comprar. seguido del nombre del producto. Cómo te puedo ayudar?',
             NO_PURCHASABLE_PRODUCT_MSG: 'No hay productos que puedas comprar. Perdona.',
             LEARN_MORE_PROMPT: [
-                'Buscaré más información sobre el producto. Me esperas?',
-                'Buscaré más detalles sobre el producto. Me puedes esperar?',
-                'Déjame buscar más detalles. Puedes esperarme?',
-                'Puedes esperar un momento mientras busco más detalles?'
+                'Buscaré más información sobre el producto. Okey?',
+                'Buscaré más detalles sobre el producto. Te parece bien?',
+                'Déjame buscar más detalles. Vale?',
+                'Quieres que busque más detalles?'
             ],
             SIMPLE_GREETINGS: ['Qué hay?','Qué tal?', 'Hola!', 'Cómo estás?', 'Como vá?'],
             SIMPLE_GREETING: 'Aquí está tu saludo simple. {{greeting}}.',
@@ -99,10 +99,10 @@ module.exports = {
             PRODUCT_LIST_MSG: 'I prodotti che puoi ascquistare sono {{products}}. Per sapere di più di un prodotto, chiedimi: dammi più informazioni riguardo a, seguito dal nome del prodotto. Se desideri acquistarlo, basta dire, compra, e il nome del prodotto. Come posso aiutarti?',
             NO_PURCHASABLE_PRODUCT_MSG: 'Non hai prodotti da poter acquistare.',
             LEARN_MORE_PROMPT: [
-                'Troverò maggiori informazioni sul prodotto. Mi aspetteresti?',
-                'Ti fornirò maggiori dettagli sul prodotto. Puoi aspettarmi?',
-                'Lascia che ti prenda i dettagli. Puoi aspettare?',
-                'Puoi aspettare un po \'mentre ti ottengo maggiori dettagli?'
+                'Troverò maggiori informazioni sul prodotto. Okey?',
+                'Ti fornirò maggiori dettagli sul prodotto. sei interessato?',
+                'Lascia che ti prenda i dettagli. sei interessato?',
+                'sei interessato a ottenere maggiori dettagli?'
             ],
             SIMPLE_GREETINGS: ['Come va?', 'Come stai?', 'Ciao!', 'Tutto bene?'],
             SIMPLE_GREETING: 'Ecco il tuo saluto semplice. {{greeting}}.',
@@ -146,10 +146,9 @@ module.exports = {
             PRODUCT_LIST_MSG: `Les produits actuellement disponibles à l'achat sont {{products}}. Pour en savoir plus sur un produit, dites-moi par exemple 'donne-moi plus d'informations sur l'abonnement premium'. Pour acheter un produit, dites-moi par exemple 'achètes l'abonnement premium'. Souhaitez-vous entendre une autre salutation?`,
             NO_PURCHASABLE_PRODUCT_MSG: `Il n'y a plus de produits disponibles à l'achat.`,
             LEARN_MORE_PROMPT: [
-                'I\'ll get more information about the product. Would you wait for me?',
-                'Je vous obtiendrai plus de détails sur le produit. Peux-tu m\'attendre?',
-                'Laissez-moi vous chercher les détails. Peux-tu m\'attendre?',
-                'Pouvez-vous attendre un peu pendant que je vous obtienne plus de détails?'
+                'Je vous obtiendrai plus de détails sur le produit. ça t\'intéresse?',
+                'Laissez-moi vous chercher les détails. ça t\'intéresse?',
+                'êtes-vous intéressé à obtenir plus de détails?'
             ],
             SIMPLE_GREETINGS: ['Bonjour!', 'Enchantée!', 'Comment allez-vous', 'Waza!'],
             SIMPLE_GREETING: `Voici votre message d'accueil. {{greeting}}.`,

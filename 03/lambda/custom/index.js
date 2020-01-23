@@ -96,6 +96,7 @@ const DescribeProductIntentHandler = {
             // upsell directive is similar to the buy directive but allows you to pass a custom message + user confirmation
             //return utils.upsellDirective(handlerInput, upsellMessage, product);
             //TODO: Replace the two lines below with the line above once upsell bug is fixed
+            // The workaround below differs from Upsell because the Upsell message is not followed for a request for confirmation
             handlerInput.responseBuilder.speak(upsellMessage);
             return utils.buyDirective(handlerInput, product);
         } else {
