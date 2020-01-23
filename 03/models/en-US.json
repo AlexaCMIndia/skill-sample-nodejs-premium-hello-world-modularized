@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "premium hello world",
+            "invocationName": "premium hello world three",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
@@ -60,14 +60,22 @@
                     "slots": [
                         {
                             "name": "product",
-                            "type": "productType"
+                            "type": "productType",
+                            "samples": [
+                                "about {product}",
+                                "about the {product}",
+                                "the {product}",
+                                "{product}"
+                            ]
                         }
                     ],
                     "samples": [
                         "what is {product}",
                         "tell me more about {product}",
                         "more information about {product}",
-                        "give me more information about {product}"
+                        "give me more information about {product}",
+                        "the {product}",
+                        "{product}"
                     ]
                 },
                 {
@@ -79,6 +87,8 @@
                             "samples": [
                                 "I want to buy the {product}",
                                 "I want to buy {product}",
+                                "I want the {product}",
+                                "I want {product}",
                                 "the {product}",
                                 "{product}"
                             ]
@@ -88,10 +98,15 @@
                         "i want to buy",
                         "purchase",
                         "buy",
+                        "subscribe",
+                        "I want to buy the {product}",
+                        "I want to buy {product}",
                         "give me {product}",
                         "get {product}",
                         "buy {product}",
-                        "sign up to {product}"
+                        "sign up to {product}",
+                        "sign me up to {product}",
+                        "subscribe to {product}"
                     ]
                 },
                 {
@@ -177,7 +192,7 @@
             "intents": [
                 {
                     "name": "DescribeProductIntent",
-                    "delegationStrategy": "SKILL_RESPONSE",
+                    "delegationStrategy": "ALWAYS",
                     "confirmationRequired": false,
                     "prompts": {},
                     "slots": [
@@ -185,8 +200,10 @@
                             "name": "product",
                             "type": "productType",
                             "confirmationRequired": false,
-                            "elicitationRequired": false,
-                            "prompts": {}
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.593674792803.723737651317"
+                            }
                         }
                     ]
                 },
@@ -236,7 +253,7 @@
                     },
                     {
                         "type": "PlainText",
-                        "value": "interested in greetings pack, premium subscription or goodbyes pack?"
+                        "value": "interested in the greetings pack, the premium subscription or the goodbyes pack?"
                     }
                 ]
             },
@@ -245,7 +262,7 @@
                 "variations": [
                     {
                         "type": "PlainText",
-                        "value": "do you want to buy greetings pack, premium subscription or goodbyes pack?"
+                        "value": "do you want to buy the greetings pack, the premium subscription or the goodbyes pack?"
                     },
                     {
                         "type": "PlainText",
@@ -258,7 +275,7 @@
                 "variations": [
                     {
                         "type": "PlainText",
-                        "value": "do you want a refund for greetings pack, premium subscription or goodbyes pack?"
+                        "value": "do you want a refund for the greetings pack, the premium subscription or the goodbyes pack?"
                     },
                     {
                         "type": "PlainText",

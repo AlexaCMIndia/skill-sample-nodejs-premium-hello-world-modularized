@@ -114,7 +114,9 @@
                         "dame la {product}",
                         "adquirir la {product}",
                         "comprar la {product}",
-                        "suscríbeme a la {product}"
+                        "suscríbeme a la {product}",
+                        "compra la {product}",
+                        "compra el {product}"
                     ]
                 },
                 {

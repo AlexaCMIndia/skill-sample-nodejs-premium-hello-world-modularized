@@ -11,7 +11,7 @@ module.exports = {
                 'Do you want to hear another greeting?'
             ],
             PRODUCT_LIST_MSG: 'Products available for purchase at this time are {{products}}. To learn more about a product, say, Tell me more about. followed by the product name. If you are ready to buy, say. Buy. followed by the product name. So what can I help you with?',
-            NO_PURCHASABLE_PRODUCT_MSG: 'You can\'t buy this product right now. Sorry about that.',
+            NO_PURCHASABLE_PRODUCT_MSG: 'There\'s nothing you can buy. Sorry about that.',
             LEARN_MORE_PROMPT: [
                 'I\'ll get more information about the product. Would you wait for me?',
                 'I\'ll get you more details about the product. Can you wait for me?',
@@ -30,7 +30,7 @@ module.exports = {
             AVAILABLE_CREDITS_MSG_plural: 'You have {{count}} premium goodbyes left. ',
             CREDITS_FOLLOWUP_STOCK: 'Just say stop, and you\'ll use one!',
             CREDITS_FOLLOWUP_NO_STOCK: 'You can buy more by saying. buy goodbyes pack.',
-            HELP_MSG: 'You can say hello to me or ask for what you can buy! How can I help?',
+            HELP_MSG: 'You can say hello to me, ask for what you can buy, for your inventory or request a refund! How can I help?',
             ERROR_MSG: 'Sorry, there was an error. Please try again.',
             SPECIAL_GOODBYE_MSG: 'Here\'s your special goodbye. ',
             SPECIAL_GOODBYE_LANG_MSG: 'That\'s goodbye in {{lang}}',
@@ -65,7 +65,7 @@ module.exports = {
                 'Quieres oir otro saludo?'
             ],
             PRODUCT_LIST_MSG: 'Los productos que puedes comprar son {{products}}. Para saber más sobre un producto, solo dí. Más información sobre. seguido del nombre del producto. Si ya quieres comprar, solo dí. Comprar. seguido del nombre del producto. Cómo te puedo ayudar?',
-            NO_PURCHASABLE_PRODUCT_MSG: 'No puedes comprar este producto. Perdona.',
+            NO_PURCHASABLE_PRODUCT_MSG: 'No hay productos que puedas comprar. Perdona.',
             LEARN_MORE_PROMPT: [
                 'Buscaré más información sobre el producto. Me esperas?',
                 'Buscaré más detalles sobre el producto. Me puedes esperar?',
@@ -84,7 +84,7 @@ module.exports = {
             AVAILABLE_CREDITS_MSG_plural: 'Te quedan {{count}} despedidas premium. ',
             CREDITS_FOLLOWUP_STOCK: 'Sólo di para, y gastarás una!',
             CREDITS_FOLLOWUP_NO_STOCK: 'Puedes comprar más diciendo. comprar paquete de despedidas.',
-            HELP_MSG: 'Puedes decirme hola y preguntarme por lo que puedes comprar. Como te puedo ayudar?',
+            HELP_MSG: 'Puedes decirme hola, preguntarme por lo que puedes comprar, por tu inventario o solicitar un reembolso. Como te puedo ayudar?',
             ERROR_MSG: 'Perdona, ha ocurrido un error. Por favor inténtalo otra vez.',
             SPECIAL_GOODBYE_MSG: 'Aquí está tu despedida especial. ',
             SPECIAL_GOODBYE_LANG_MSG: 'Significa adiós en {{lang}}',
@@ -138,7 +138,7 @@ module.exports = {
             AVAILABLE_CREDITS_MSG_plural: 'Hai ancora {{count}} addii premium rimasti. ',
             CREDITS_FOLLOWUP_STOCK: 'Dì stop, e ne userai uno!',
             CREDITS_FOLLOWUP_NO_STOCK: 'Puoi comprarne altri dicendo. compra pacchetto di addii.',
-            HELP_MSG: 'Puoi dirmi Ciao oppure chiedermi cosa puoi comprare! Cosa vuoi fare?',
+            HELP_MSG: 'Puoi dirmi Ciao, chiedermi cosa puoi comprare, preguntarme por me inventario oppure chiedere un rimborso! Cosa vuoi fare?',
             ERROR_MSG: 'Si è verificato un errore. Per favore riprova!',
             SPECIAL_GOODBYE_MSG: 'Ecco il tuo addio speciale. ',
             SPECIAL_GOODBYE_LANG_MSG: 'Vuol dire addio in {{lang}}',
@@ -195,7 +195,7 @@ module.exports = {
             AVAILABLE_CREDITS_MSG: `Il vous reste {{count}} adieu personnalisé.`,
             CREDITS_FOLLOWUP_STOCK: `Dites simplement 'stop' and vous utiliserez un credit.`,
             CREDITS_FOLLOWUP_NO_STOCK: `Pour acheter des credits supplémentaires, dites simplement 'achètes le pack d'aurevoir personnalisé'.`,
-            HELP_MSG: `Je peux vous dire bonjour ou bien vous proposez les produits disponibles à l'achat. Quel est votre choix?`,
+            HELP_MSG: `Je peux vous dire bonjour, vous proposez les produits disponibles à l'achat, renseigner sur votre inventaire ou bien demander le remboursement d'un produit. Quel est votre choix?`,
             ERROR_MSG: `Désolé, je n'ai pas compris. Pouvez-vous reformuler?`,
             SPECIAL_GOODBYE_MSG: `Voici votre adieux personalisé: `,
             SPECIAL_GOODBYE_LANG_MSG: `Cela veut dire 'au revoir' en {{lang}}.`,

@@ -14,7 +14,7 @@ function getSpecialGoodbye(handlerInput) {
         {language: handlerInput.t('en-AU'), greeting: 'catch you later', locale: 'en-AU', voice: ['Nicole', 'Russell']},
         {language: handlerInput.t('en-GB'), greeting: 'farewell', locale: 'en-GB', voice: ['Amy', 'Brian', 'Emma']},
         {language: handlerInput.t('en-IN'), greeting: 'goodbye', locale: 'en-IN', voice: ['Aditi', 'Raveena']},
-        /*{language: handlerInput.t('hi-IN'), greeting: 'अलविदा', locale: 'hi-IN', voice: ['Aditi'] // hi-IN lang tag is broken},*/
+        {language: handlerInput.t('hi-IN'), greeting: 'अलविदा', locale: 'hi-IN', voice: ['Aditi']},
         {language: handlerInput.t('de-DE'), greeting: 'auf wiedersehen', locale: 'de-DE', voice: ['Hans', 'Marlene', 'Vicki']},
         {language: handlerInput.t('es-ES'), greeting: 'hasta luego', locale: 'es-ES', voice: ['Conchita', 'Enrique']},
         {language: handlerInput.t('fr-FR'), greeting: 'au revoir', locale: 'fr-FR', voice: ['Celine', 'Lea', 'Mathieu']},
@@ -35,7 +35,7 @@ function getSpecialHello(handlerInput) {
         {language: handlerInput.t('en-AU'), greeting: 'how you going?', locale: 'en-AU', voice: ['Nicole', 'Russell']},
         {language: handlerInput.t('en-GB'), greeting: 'how do you do?', locale: 'en-GB', voice: ['Amy', 'Brian', 'Emma']},
         {language: handlerInput.t('en-IN'), greeting: 'Hello', locale: 'en-IN', voice: ['Aditi', 'Raveena']},
-        /*{language: handlerInput.t('hi-IN'), greeting: 'नमस्ते', locale: 'hi-IN', voice: ['Aditi'] // hi-IN lang tag is broken},*/
+        {language: handlerInput.t('hi-IN'), greeting: 'नमस्ते', locale: 'hi-IN', voice: ['Aditi']},
         {language: handlerInput.t('de-DE'), greeting: 'Hallo', locale: 'de-DE', voice: ['Hans', 'Marlene', 'Vicki']},
         {language: handlerInput.t('es-ES'), greeting: 'Hola', locale: 'es-ES', voice: ['Conchita', 'Enrique']},
         {language: handlerInput.t('fr-FR'), greeting: 'Bonjour', locale: 'fr-FR', voice: ['Celine', 'Lea', 'Mathieu']},
@@ -128,7 +128,7 @@ function getResponseBasedOnAccessType(handlerInput, productList, preSpeechText) 
     const greetingsPackProduct = productList.inSkillProducts.find(item => item.referenceName === 'Greetings_Pack');
     const premiumSubscriptionProduct = productList.inSkillProducts.find(item => item.referenceName === 'Premium_Subscription');
 
-    let speechOutput, cardText, repromptOutput;
+    let speechOutput, repromptOutput;
 
     const specialGreeting = getSpecialHello(handlerInput);
     const preGreetingSpeechText = `${preSpeechText} ${handlerInput.t('SPECIAL_GREETING_MSG')}`;
@@ -137,18 +137,16 @@ function getResponseBasedOnAccessType(handlerInput, productList, preSpeechText) 
 
     if (isEntitled(premiumSubscriptionProduct)) {
         // Customer has bought the Premium Subscription. Switch to Polly Voice, and return special hello
-        cardText = `${preGreetingSpeechText} ${specialGreeting.greeting} ${postGreetingSpeechText}`;
         const randomVoice = randomItem(specialGreeting.voice);
         speechOutput = `${preGreetingSpeechText} ${switchVoice(langSpecialGreeting, randomVoice)} ${postGreetingSpeechText} ${handlerInput.t('YES_NO_QUESTION')}`;
         repromptOutput = `${handlerInput.t('YES_NO_QUESTION')}`;
     } else if (isEntitled(greetingsPackProduct)) {
         // Customer has bought the Greetings Pack, but not the Premium Subscription. Return special hello greeting in Alexa voice
-        cardText = `${preGreetingSpeechText} ${specialGreeting.greeting} ${postGreetingSpeechText}`;
         speechOutput = `${preGreetingSpeechText} ${langSpecialGreeting} ${postGreetingSpeechText} ${handlerInput.t('YES_NO_QUESTION')}`;
         repromptOutput = `${handlerInput.t('YES_NO_QUESTION')}`;
         if (shouldUpsell(handlerInput) && premiumSubscriptionProduct) {
             console.log("Triggering upsell" + JSON.stringify(premiumSubscriptionProduct));
-            // Say the simple greeting, and then Upsell Greetings Pack
+            // Say the simple greeting, and then upsell the premium subscription
             const upsellMessage = `${preGreetingSpeechText} ${langSpecialGreeting} ${postGreetingSpeechText}` + ' ' + handlerInput.t('UPSELL_SUBSCRIPTION_MSG');
             return upsellDirective(handlerInput, upsellMessage, premiumSubscriptionProduct);
         }
@@ -162,17 +160,14 @@ function getResponseBasedOnAccessType(handlerInput, productList, preSpeechText) 
             const upsellMessage = handlerInput.t('SIMPLE_GREETING', { greeting: greeting }) + ' ' + handlerInput.t('UPSELL_ENTITLEMENT_MSG');
             return upsellDirective(handlerInput, upsellMessage, greetingsPackProduct);
         }
-
         // Do not make the upsell. Just return Simple Hello Greeting.
-        cardText = handlerInput.t('SIMPLE_GREETING', { greeting: greeting });
-        speechOutput = cardText + ' ' + handlerInput.t('YES_NO_QUESTION');
+        speechOutput = handlerInput.t('SIMPLE_GREETING', { greeting: greeting }) + ' ' + handlerInput.t('YES_NO_QUESTION');
         repromptOutput = handlerInput.t('YES_NO_QUESTION');
     }
 
     return handlerInput.responseBuilder
         .speak(speechOutput)
         .reprompt(repromptOutput)
-        .withSimpleCard(handlerInput.t('SKILL_NAME'), cardText)
         .getResponse();
 }
 
@@ -186,7 +181,7 @@ function shouldUpsell(handlerInput) {
         // If the last intent was Connections.Response, do not upsell
         return false;
     }
-    return randomItem([true, false]); // randomize upsell
+    return randomItem([true, false]); // randomize upsell, you can have a more advanced logic here
 }
 
 function switchVoice(speakOutput, voiceName) {

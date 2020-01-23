@@ -7,7 +7,7 @@
           "examplePhrases": [
             "Alexa open Premium Hello World"
           ],
-          "name": "Premium Hello World",
+          "name": "Premium Hello World Three",
           "description": "Premium Hello World greets you in a variety of languages"
         },
         "en-GB": {
@@ -15,7 +15,7 @@
           "examplePhrases": [
             "Alexa open Premium Hello World"
           ],
-          "name": "Premium Hello World",
+          "name": "Premium Hello World Three",
           "description": "Premium Hello World greets you in a variety of languages"
         },
         "es-ES": {
@@ -23,7 +23,7 @@
           "examplePhrases": [
             "Alexa abre Hola Mundo Premium"
           ],
-          "name": "Hola Mundo Premium",
+          "name": "Hola Mundo Premium Tres",
           "description": "Hola Mundo Premium te saluda en distintos idiomas."
         },
         "es-US": {
@@ -31,7 +31,7 @@
           "examplePhrases": [
             "Alexa abre Hola Mundo Premium"
           ],
-          "name": "Hola Mundo Premium",
+          "name": "Hola Mundo Premium Tres",
           "description": "Hola Mundo Premium te saluda en distintos idiomas."
         },
         "it-IT": {
@@ -39,7 +39,7 @@
           "examplePhrases": [
             "Alexa apri ciao mondo premium"
           ],
-          "name": "Ciao Mondo Premium",
+          "name": "Ciao Mondo Premium Tre",
           "description": "Ciao Mondo Premium ti saluta in diverse lingue."
         },
         "fr-FR": {
@@ -47,7 +47,7 @@
           "examplePhrases": [
             "Alexa ouvre le génie des salutations premium"
           ],
-          "name": "Genie des Salutations version Premium",
+          "name": "Genie des Salutations version Premium Trois",
           "description": "Le Génie des Saluatations (version Premium) vous salue dans différentes langues."
         }
       },
@@ -60,7 +60,7 @@
       "custom": {
         "endpoint": {
           "sourceDir": "lambda/custom",
-          "uri": "ask-premium-hello-world"
+          "uri": "ask-premium-hello-world-3"
         }
       }
     },
