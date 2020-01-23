@@ -48,10 +48,23 @@
                     "slots": [
                         {
                             "name": "product",
-                            "type": "productType"
+                            "type": "productType",
+                            "samples": [
+                                "quiero información del {product}",
+                                "quiero información de la {product}",
+                                "me interesa el {product}",
+                                "me interesa la {product}",
+                                "el {product}",
+                                "la {product}",
+                                "{product}"
+                            ]
                         }
                     ],
                     "samples": [
+                        "más información",
+                        "quiero saber más",
+                        "dame más información",
+                        "quiero más información",
                         "qué es el {product}",
                         "qué es la {product}",
                         "quiero saber más sobre el {product}",
@@ -117,6 +130,8 @@
                                 "quiero un reembolso del {product}",
                                 "quiero un reembolso de la {product}",
                                 "quiere un reembolso de {product}",
+                                "del {product}",
+                                "de la {product}",
                                 "el {product}",
                                 "la {product}",
                                 "{product}"
@@ -171,7 +186,7 @@
             "intents": [
                 {
                     "name": "DescribeProductIntent",
-                    "delegationStrategy": "SKILL_RESPONSE",
+                    "delegationStrategy": "ALWAYS",
                     "confirmationRequired": false,
                     "prompts": {},
                     "slots": [

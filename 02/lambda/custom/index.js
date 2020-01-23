@@ -78,6 +78,7 @@ const DescribeProductIntentHandler = {
     },
     async handle(handlerInput) {
         console.log('Handler: DescribeProductIntentHandler');
+        
         const productReferenceName = Alexa.getSlot(handlerInput.requestEnvelope, 'product').resolutions.resolutionsPerAuthority[0].values[0].value.id;
         const locale = Alexa.getLocale(handlerInput.requestEnvelope);
         let speechOutput, repromptOutput;
@@ -93,7 +94,10 @@ const DescribeProductIntentHandler = {
             // since they are interested and it's purchasable we can try to upsell the product
             const upsellMessage = `${speechOutput + handlerInput.t('LEARN_MORE_PROMPT')}`;
             // upsell directive is similar to the buy directive but allows you to pass a custom message + user confirmation
-            return utils.upsellDirective(handlerInput, upsellMessage, product);
+            //return utils.upsellDirective(handlerInput, upsellMessage, product);
+            //TODO: Replace the two lines below with the line above once upsell bug is fixed
+            handlerInput.responseBuilder.speak(upsellMessage);
+            return utils.buyDirective(handlerInput, product);
         } else {
             speechOutput = handlerInput.t('NO_PURCHASABLE_PRODUCT_MSG') + ' ' + handlerInput.t('YES_NO_QUESTION');
             repromptOutput = handlerInput.t('YES_NO_QUESTION');
@@ -188,7 +192,17 @@ const RefundProductIntentHandler = {
     },
     async handle(handlerInput) {
         console.log('Handler: RefundProductIntentHandler');
-        const productReferenceName = Alexa.getSlot(handlerInput.requestEnvelope, 'product').resolutions.resolutionsPerAuthority[0].values[0].value.id;
+        const slotValue = Alexa.getSlotValue(handlerInput.requestEnvelope, 'product');
+        const slot = Alexa.getSlot(handlerInput.requestEnvelope, 'product');
+        const matched = slot.resolutions.resolutionsPerAuthority[0].status.code === 'ER_SUCCESS_MATCH';
+
+        if(!matched) {
+            return handlerInput.responseBuilder
+                .speak(handlerInput.t('CANCEL_PRODUCT_ERROR_MSG') + ' ' + handlerInput.t('YES_NO_QUESTION'))
+                .getResponse();
+        }
+
+        const productReferenceName = slot.resolutions.resolutionsPerAuthority[0].values[0].value.id;
         const locale = Alexa.getLocale(handlerInput.requestEnvelope);
 
         const monetizationClient = handlerInput.serviceClientFactory.getMonetizationServiceClient();
@@ -248,7 +262,7 @@ const CancelProductResponseHandler = {
         console.log(`Connections.Response indicated failure. error: ${request.status.message}`);
 
         return handlerInput.responseBuilder
-            .speak(handlerInput.t('CANCEL_PRODUCT_ERROR_MSG'))
+            .speak(handlerInput.t('CANCEL_PRODUCT_ERROR_MSG') + ' ' + handlerInput.t('YES_NO_QUESTION'))
             .getResponse();
     }
 };

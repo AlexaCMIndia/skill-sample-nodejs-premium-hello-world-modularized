@@ -59,10 +59,19 @@
 					"slots": [
 						{
 							"name": "product",
-							"type": "productType"
+                            "type": "productType",
+                            "samples": [
+                                "il prodotto {product}",
+                                "il {product}",
+                                "la {product}",
+                                "{product}"
+                            ]
 						}
 					],
 					"samples": [
+						"voglio sapere di più",
+						"dammi più informazioni",
+						"voglio più informazioni",
 						"cos'è il prodotto {product}",
 						"voglio sapere di più del prodotto {product}",
 						"dammi più informazioni su {product}",
@@ -190,18 +199,20 @@
 			"intents": [
 				{
 					"name": "DescribeProductIntent",
-					"delegationStrategy": "SKILL_RESPONSE",
-					"confirmationRequired": false,
+					"delegationStrategy": "ALWAYS",
+                    "confirmationRequired": false,
 					"prompts": {},
 					"slots": [
-						{
-							"name": "product",
-							"type": "productType",
-							"confirmationRequired": false,
-							"elicitationRequired": false,
-							"prompts": {}
-						}
-					]
+                        {
+                            "name": "product",
+                            "type": "productType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.593674792803.723737651317"
+                            }
+                        }
+                    ]
 				},
 				{
 					"name": "BuyProductIntent",
@@ -249,7 +260,7 @@
 					},
 					{
 						"type": "PlainText",
-						"value": "Vuoi sapere di più del pacchetto di saluti, del pacchetto di addii o dell'iscrizione premium?"
+						"value": "Vuoi sapere di più del pacchetto di saluti o dell'iscrizione premium?"
 					}
 				]
 			},
@@ -258,7 +269,7 @@
 				"variations": [
 					{
 						"type": "PlainText",
-						"value": "Vuoi comprare il pacchetto di saluti, il pacchetto di addii o l'iscrizione premium?"
+						"value": "Vuoi comprare il pacchetto di saluti o l'iscrizione premium?"
 					},
 					{
 						"type": "PlainText",
@@ -271,7 +282,7 @@
 				"variations": [
 					{
 						"type": "PlainText",
-						"value": "Desideri un rimborso del pacchetto di saluti, del pacchetto di addii o dell'iscrizione premium?"
+						"value": "Desideri un rimborso del pacchetto di saluti o dell'iscrizione premium?"
 					},
 					{
 						"type": "PlainText",

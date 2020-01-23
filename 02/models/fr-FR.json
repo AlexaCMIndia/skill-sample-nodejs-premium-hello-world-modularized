@@ -68,13 +68,14 @@
                     "samples": [
                         "description", 
                         "plus d'information",
+                        "donne-moi plus d'informations",
                         "plus d'information sur {product}",
                         "donne-moi plus d'informations sur {product}",
                         "donne-moi plus d'informations sur le produit {product}",
                         "donne-moi plus la description de {product}",
                         "donne-moi plus la description du produit {product}",
                         "quel est le produit {product}",
-                        {product}",
+                        "{product}",
                         "le {product}",
                         "le produit {product}",
                         "description {product}"
