@@ -78,8 +78,17 @@ const DescribeProductIntentHandler = {
     },
     async handle(handlerInput) {
         console.log('Handler: DescribeProductIntentHandler');
-        
-        const productReferenceName = Alexa.getSlot(handlerInput.requestEnvelope, 'product').resolutions.resolutionsPerAuthority[0].values[0].value.id;
+        // this intent is configured in the model with manual delegation to avoid an error in upsell
+        // see: https://github.com/alexa/alexa-skills-kit-sdk-for-python/issues/102
+        // so we have to do manual dialog delgation for the upsell directive to work
+        const slot = Alexa.getSlot(handlerInput.requestEnvelope, 'product');
+        if(!slot.resolutions){ // handler was triggered without a slot value
+            const currentIntent = handlerInput.requestEnvelope.request.intent;
+            return handlerInput.responseBuilder
+                .addDelegateDirective(currentIntent)
+                .getResponse();
+        }
+        const productReferenceName = slot.resolutions.resolutionsPerAuthority[0].values[0].value.id;
         const locale = Alexa.getLocale(handlerInput.requestEnvelope);
         let speechOutput, repromptOutput;
 
@@ -94,10 +103,7 @@ const DescribeProductIntentHandler = {
             // since they are interested and it's purchasable we can try to upsell the product
             const upsellMessage = `${speechOutput + handlerInput.t('LEARN_MORE_PROMPT')}`;
             // upsell directive is similar to the buy directive but allows you to pass a custom message + user confirmation
-            //return utils.upsellDirective(handlerInput, upsellMessage, product);
-            //TODO: Replace the two lines below with the line above once upsell bug is fixed
-            handlerInput.responseBuilder.speak(upsellMessage);
-            return utils.buyDirective(handlerInput, product);
+            return utils.upsellDirective(handlerInput, upsellMessage, product);
         } else {
             speechOutput = handlerInput.t('NO_PURCHASABLE_PRODUCT_MSG') + ' ' + handlerInput.t('YES_NO_QUESTION');
             repromptOutput = handlerInput.t('YES_NO_QUESTION');

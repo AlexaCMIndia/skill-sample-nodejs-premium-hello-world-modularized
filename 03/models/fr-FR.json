@@ -213,7 +213,7 @@
             "intents": [
                 {
                     "name": "DescribeProductIntent",
-                    "delegationStrategy": "ALWAYS",
+                    "delegationStrategy": "SKILL_RESPONSE",
                     "confirmationRequired": false,
                     "prompts": {},
                     "slots": [
@@ -230,7 +230,6 @@
                 },
                 {
                     "name": "BuyProductIntent",
-                    "delegationStrategy": "ALWAYS",
                     "confirmationRequired": false,
                     "prompts": {},
                     "slots": [
@@ -247,7 +246,6 @@
                 },
                 {
                     "name": "RefundProductIntent",
-                    "delegationStrategy": "ALWAYS",
                     "confirmationRequired": false,
                     "prompts": {},
                     "slots": [
