@@ -14,4 +14,4 @@ Adding premium content to your skill is a way for you to monetize your skill.  T
 8. [Module 03](./03): Ask for purchase history
 9. [Module 03](./03): Ask for inventory of consumables (DynamoDB based persistence adapter used for keeping track)
 
-Each module builds on top of the previous module so module 3 covers all topics.
+Each module is self-sustainable and can be deployed independently but each builds on top of the previous one. Hence module 3 covers all topics.
